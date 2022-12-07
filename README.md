@@ -5,47 +5,39 @@ Repositório destinado a resolver diversos desafios da plataforma [Frontend Ment
 
 ## Sumário
 - [Desafios](#desafios)
-  - [Junior](#junior)
-   - [News homepage](#news-homepage) 
-  - [Intermediário](#intermediário)
-  - [Avançado](#avançado)
+  - [News homepage](#news-homepage) 
 
 ## Desafios
 
-### Junior
-
-#### News homepage
+### News homepage
 
 Essa é a solução para o desafio [News homepage challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
+Nível de dificuldade = Junior
 
-##### Screenshot
+#### Screenshot
 
 Minha resolução - desktop
-![Minha resolução desktop](https://ibb.co/rx4xHcJ)
+<img src="https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png" alt="minha resolução desktop" width="200"/>
 
 Minha resolução - mobile
-![Minha resolução mobile](https://ibb.co/6YKFTM3)
+<img src="https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png" alt="minha resolução mobile" width="200"/>
 
 Resolução plataforma - desktop
-![Resolução plataforma desktop](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg)
+<img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg" alt="plataforma desktop" width="200"/>
 
 Resolução plataforma - mobile
-![Resolução plataforma mobile](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg)
+<img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg" alt="plataforma desktop" width="200"/>
 
-##### Resolução
+#### Resolução
 
 - [Clique aqui para acessar a minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/news-homepage-main/index.html)
 
-##### Skills praticadas
+#### Skills praticadas
 
 - Semanticidade HTML5
 - Flexbox display
 - Responsividade
 
-##### Conclusão
+#### Conclusão
 
 Um desafio bem simples, com um layout intuitivo e agradável, mas que me fez quebrar um pouco a cabeça em relação ao elementos do rodapé da página, pois não estavam se enquadrando tão bem quanto eu queria. Por fim, o resultado me agradou bastante!
-
-### Intermediário
-
-### Avançado
