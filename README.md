@@ -11,22 +11,22 @@ Repositório destinado a resolver diversos desafios da plataforma [Frontend Ment
 
 ### News homepage
 
-Essa é a solução para o desafio [News homepage challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
+Essa é a solução para o desafio [News homepage challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). <br>
 Nível de dificuldade = Junior
 
 #### Screenshot
 
-Minha resolução - desktop
-<img src="https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png" alt="minha resolução desktop" width="200"/>
+Minha resolução - desktop <br>
+![](https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png)
 
-Minha resolução - mobile
-<img src="https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png" alt="minha resolução mobile" width="200"/>
+Minha resolução - mobile <br>
+![](https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png)
 
-Resolução plataforma - desktop
-<img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg" alt="plataforma desktop" width="200"/>
+Resolução plataforma - desktop <br>
+![](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg)
 
-Resolução plataforma - mobile
-<img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg" alt="plataforma desktop" width="200"/>
+Resolução plataforma - mobile <br>
+![](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg)
 
 #### Resolução
 
