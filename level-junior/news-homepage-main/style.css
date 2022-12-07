@@ -20,19 +20,19 @@
     --font-main: 'Inter', sans-serif;
 
     --fs-xl: 3rem;
-    --fs-600: 2rem;
-    --fs-500: 1.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.2rem;
     --fs-400: 1rem
 }
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
     :root{
-        --fs-xl: 2rem;
+        --fs-xl: 3rem;
         --fs-600: 1.5rem;
         --fs-500: 1.2rem;
         --fs-400: 0.8rem
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     :root{
         --fs-xl: 3rem;
         --fs-600: 2rem;
@@ -182,7 +182,10 @@ section#sec-list .card-wrapper{
     gap: 20px;
 }
 section#sec-list .card-wrapper img{
-    width: 25%;
+    align-self: flex-start;
+    max-width: 100%;
+    width: 45%;
+    object-fit: contain;
 }
 section#sec-list .card-wrapper .card-content{
     display: flex;
@@ -203,7 +206,7 @@ section#sec-list .card-wrapper .card-content p{
     line-height: 1.4;
     text-align: left;
 }
-@media all and (max-width: 950px){
+@media all and (max-width: 1100px){
     section#sec-news article #below-img{
         flex-direction: column;
     }
@@ -213,8 +216,11 @@ section#sec-list .card-wrapper .card-content p{
     section#sec-news article #below-img #right-h1{
         flex: 0 1;
     }
+    section#sec-news article #below-img #right-h1 p{
+        font-size: var(--fs-500);
+    }
 }
-@media all and (max-width: 600px){
+@media all and (max-width: 720px){
     header nav{
         display: none;
     }
@@ -226,5 +232,8 @@ section#sec-list .card-wrapper .card-content p{
     }
     section#sec-list{
         flex-direction: column;
+    }
+    section#sec-list .card-wrapper img{
+        width: 100px;
     }
 }
