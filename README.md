@@ -14,18 +14,19 @@
 Nível de dificuldade = **Junior**<br>
 Essa é a solução para o desafio [News homepage challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
-#### Screenshot
+#### Screenshots
 
-<div style="display: flex;">
-  <p>
-    <p>Minha resolução - desktop<p/>
-    <img src="https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png">
-  <p/>
-  <p>
-    <p>Resolução plataforma - desktop<p/>
-    <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg">
-  <p/>
-</div>
+<p align="center">Minha resolução X Resolução plataforma<p/>
+<p align="center">
+    <img alt="" src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_900/Screenshots/hnvbkbuxbiqsnjb8seei.jpg" width="45%" height="300px" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg" width="45%" height="300px" align="top">
+</p>
+<p align="center">
+    <img alt="" src="https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png" width="45%" height="1700px" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="Dark" src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg" width="45%" height="1700px" align="top">
+</p>
 
 #### Resolução
 
