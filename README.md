@@ -15,21 +15,18 @@ Nível de dificuldade = **Junior**<br>
 Essa é a solução para o desafio [News homepage challenge](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
 #### Screenshot
-<div style="display: flex;">
-Minha resolução - desktop <br>
-![](https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png)
 
-Resolução plataforma - desktop <br>
-![](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg)  
-</div>
 <div style="display: flex;">
-Minha resolução - mobile <br>
-![](https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png)
-  
-Resolução plataforma - mobile <br>
-![](https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg)
+  <p>
+    <p>Minha resolução - desktop<p/>
+    <img src="https://i.ibb.co/YcpchyG/imagem-2022-12-07-121502432.png">
+  <p/>
+  <p>
+    <p>Resolução plataforma - desktop<p/>
+    <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg">
+  <p/>
 </div>
-  
+
 #### Resolução
 
 [Clique aqui para acessar a minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/news-homepage-main/index.html)
