@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Dropdown navigation</title>
+</head>
+<body>
+  <header>
+    <span></span>
+    <img src="./images/logo.svg" alt="">
+    <div id="nav-wrapper">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="nav-expansive">Features</a>
+            <ul class="hidden-li">
+              <li><a href="#">Todo List</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Reminders</a></li>
+              <li><a href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="nav-expansive">Company</a>
+            <ul class="hidden-li">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <ul>
+        <li><a href="#" id="login">Login</a></li>
+        <li><a href="" id="register">Register</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section>
+      <article id="main-content">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals and watch productivity soar.</p>
+        <a href="#" class="bttn">Learn more</a>
+      </article>
+      <footer id="sponsors">
+        <img src="./images/client-databiz.svg" alt="">
+        <img src="./images/client-audiophile.svg" alt="">
+        <img src="./images/client-meet.svg" alt="">
+        <img src="./images/client-maker.svg" alt="">
+      </footer>
+    </section>
+    <aside>
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/image-hero-mobile.png">
+        <img src="./images/image-hero-desktop.png" alt="">
+      </picture>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
