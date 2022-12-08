@@ -13,31 +13,35 @@
     <img src="./images/logo.svg" alt="">
     <div id="nav-wrapper">
       <nav>
-        <ul>
+        <ul class="first-li">
           <li>
-            <a href="#" class="nav-expansive">Features</a>
-            <ul class="hidden-li">
-              <li><a href="#">Todo List</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Reminders</a></li>
-              <li><a href="#">Planning</a></li>
-            </ul>
+            <a href="#" class="nav-expansive" onclick="this.nextElementSibling.classList.toggle('active')">Features</a>
+            <div class="hidden-li left-li">
+              <ul id="first-hidden-li">
+                <li><a href="#">Todo List</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Reminders</a></li>
+                <li><a href="#">Planning</a></li>
+              </ul>
+            </div>
           </li>
           <li>
-            <a href="#" class="nav-expansive">Company</a>
-            <ul class="hidden-li">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
+            <a href="#" class="nav-expansive" onclick="this.nextElementSibling.classList.toggle('active')">Company</a>
+            <div class="hidden-li right-li">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
           </li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </nav>
-      <ul>
+      <ul class="first-li">
         <li><a href="#" id="login">Login</a></li>
-        <li><a href="" id="register">Register</a></li>
+        <li><a href="#" id="register">Register</a></li>
       </ul>
     </div>
   </header>

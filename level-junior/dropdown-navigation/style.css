@@ -57,7 +57,6 @@ body{
 header{
     display: flex;
     align-items: center;
-    gap: 30px;
     padding: 20px 30px 40px;
     color: var(--color-gray);
 }
@@ -68,13 +67,18 @@ header ul{
     align-items: center;
     gap: 20px;
 }
-header li{
+header ul.first-li{
+    flex-direction: row;
+}
+header ul.first-li li{
+    position: relative;
     height: fit-content;
 }
 header span{
     display: none;
 }
 #nav-wrapper{
+    margin-left: 20px;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -89,6 +93,54 @@ header span{
     height: fit-content;
     content: url('./images/icon-arrow-down.svg');
     margin-left: 5px;
+}
+.hidden-li{
+    transform: scale(0);
+    transition: all 500ms cubic-bezier(0, 0.82, 0.28, 1.1);
+}
+.hidden-li.active{
+    display: block;
+    transform: scale(1);
+}
+.hidden-li{
+    background-color: white;
+    padding: 20px 30px;
+    position: absolute;
+    top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+.left-li{
+    transform-origin: top right;
+    right: 0;
+}
+.right-li{
+    transform-origin: top left;
+    left: 0;
+}
+.hidden-li ul{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ul#first-hidden-li li{
+    margin-left: 10px;
+}
+ul#first-hidden-li li > *{
+    margin-left: 10px;
+}
+ul#first-hidden-li li:nth-child(1)::marker{
+    content: url('./images/icon-todo.svg');
+}
+ul#first-hidden-li li:nth-child(2)::marker{
+    content: url('./images/icon-calendar.svg');
+}
+ul#first-hidden-li li:nth-child(3)::marker{
+    content: url('./images/icon-reminders.svg');
+}
+ul#first-hidden-li li:nth-child(4)::marker{
+    content: url('./images/icon-planning.svg');
 }
 #register{
     width: fit-content;
@@ -169,22 +221,11 @@ a:hover{
         top: 0;
         right: -120%;
         padding: 100px 30px;
-        gap: 70px;
+        gap: 50px;
         background-color: var(--color-white);
         transition: 0.3s;
         z-index: 2;
     }
-    /*
-    #nav-wrapper::after{
-        display: block;
-        position: fixed;
-        width: 40%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        content: "";
-        background-color: rgba(0,0,0,0.5);
-    }*/
     #black-background{
         display: block;
         position: fixed;
@@ -200,6 +241,20 @@ a:hover{
     #nav-wrapper.active{
         right: 0;
     }
+    .hidden-li{
+        position: absolute;
+        transform: scale(0);
+        transform-origin: top left;
+        background-color: transparent;
+        padding: 20px 15px 0;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+    .hidden-li.active{
+        position: relative;
+    }
     header span{
         display: block;
         position: fixed;
@@ -213,11 +268,11 @@ a:hover{
         content: url('./images/icon-close-menu.svg');
     }
     header ul{
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
         text-align: center;
         width: 100%;
-        gap: 25px;
+        gap: 20px;
     }
     header ul li, header ul *{
         width: 100% !important;
@@ -227,9 +282,6 @@ a:hover{
     }
     nav ul li{
         text-align: left;
-    }
-    .hidden-li{
-        display: none;
     }
     main{
         width: 100%;
