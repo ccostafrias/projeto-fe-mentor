@@ -5,7 +5,8 @@
 
 ## Sumário
 - [Desafios](#desafios)
-  - [News homepage](#news-homepage) 
+  - [News homepage](#news-homepage)
+  - [Dropdown navigation](#dropdown-navigation) 
 
 ## Desafios
 
@@ -16,21 +17,13 @@ Essa é a solução para o desafio [News homepage challenge](https://www.fronten
 
 #### Screenshots
 
-<p align="center">Minha resolução X Resolução plataforma<p/>
-<p align="center">
-    <img alt="" src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_900/Screenshots/hnvbkbuxbiqsnjb8seei.jpg" width="45%" height="300px" align="top">
-&nbsp; &nbsp; &nbsp; &nbsp;
-    <img alt="" src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/parjyu2ejag4sdrmbk2e.jpg" width="45%" height="300px" align="top">
-</p>
-<p align="center">
-    <img alt="" src="https://i.ibb.co/b14XC0S/imagem-2022-12-07-121549800.png" width="45%" height="1700px" align="top">
-&nbsp; &nbsp; &nbsp; &nbsp;
-    <img alt="Dark" src="https://res.cloudinary.com/dz209s6jk/image/upload/v1666363597/Challenges/wlz5dywbxgygxlsrvw8h.jpg" width="45%" height="1700px" align="top">
-</p>
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/news-homepage-main/index.html)
 
-#### Resolução
-
-[Clique aqui para acessar a minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/news-homepage-main/index.html)
+<p align="center">
+    <img alt="" src="./readme-images/news-homepage-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/news-homepage-mobile.gif" width="20%" align="top">   
+</p>
 
 #### Skills praticadas
 
@@ -41,3 +34,31 @@ Essa é a solução para o desafio [News homepage challenge](https://www.fronten
 #### Conclusão
 
 Um desafio bem simples, com um layout intuitivo e agradável, mas que me fez quebrar um pouco a cabeça em relação ao elementos do rodapé da página, pois não estavam se enquadrando tão bem quanto eu queria. Por fim, o resultado me agradou bastante!
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Dropdown navigation
+
+Nível de dificuldade = **Junior**<br>
+Essa é a solução para o desafio [Intro section with dropdown navigation](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/dropdown-navigation/index.html)
+
+<p align="center">
+    <img alt="" src="./readme-images/drop-navigation-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/drop-navigation-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Flexbox display
+- Grid display
+- Responsividade
+- Menu de navegação interativo
+
+#### Conclusão
+
+Outro desafio simples, mas com um resultado bem bacana. Pude explorar um pouco dos menus de navegação, até então pouco estudados por minha pessoa.
