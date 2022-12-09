@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-red: hsl(1, 90%, 64%);
+    --color-blue: hsl(219, 85%, 26%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-blue-grayish-1: hsl(211, 68%, 94%);
+    --color-blue-grayish-2: hsl(205, 33%, 90%);
+    --color-blue-grayish: hsl(219, 14%, 63%);
+    --color-blue-grayish-dark: hsl(219, 12%, 42%);
+    --color-blue-grayish-light: hsl(210, 60%, 98%);
+    --color-blue-dark: hsl(224, 21%, 14%);
+
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+
+    --fs-xl: 3rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.2rem;
+    --fs-400: 1rem;
+}
+@media (max-width: 1100px) {
+    :root{
+        --fs-xl: 3rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.2rem;
+        --fs-400: 0.8rem
+    }
+}
+@media (max-width: 720px) {
+    :root{
+        --fs-xl: 3rem;
+        --fs-600: 2rem;
+        --fs-500: 1.5rem;
+        --fs-400: 1rem
+    }
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    text-align: justify;
+    line-height: 1.4;
+}
+html, body{
+    min-height: 100vh;
+}
+body{
+    position: relative;
+    font-size: 16px;
+    background-color: var(--color-blue-grayish-light);
+    font-family: var(--font-main);
+    color: var(--color-blue-dark);
+    width: 100%;
+}
+main{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#notification{
+
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
