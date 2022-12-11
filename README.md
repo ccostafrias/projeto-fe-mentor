@@ -6,7 +6,8 @@
 ## Sumário
 - [Desafios](#desafios)
   - [News homepage](#news-homepage)
-  - [Dropdown navigation](#dropdown-navigation) 
+  - [Dropdown navigation](#dropdown-navigation)
+  - [Notification page](#notification-page)
 
 ## Desafios
 
@@ -62,3 +63,31 @@ Essa é a solução para o desafio [Intro section with dropdown navigation](http
 #### Conclusão
 
 Outro desafio simples, mas com um resultado bem bacana. Pude explorar um pouco dos menus de navegação, até então pouco estudados por minha pessoa.
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Notification Page
+
+Nível de dificuldade = **Junior**<br>
+Essa é a solução para o desafio [Notifications page](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/notifications-page-main/index.html)
+
+<p align="center">
+    <img alt="" src="./readme-images/notification-page-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/notification-page-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Flexbox display
+- JavaScript com DOM elements
+- Form values
+
+#### Conclusão
+
+Um desafio com layout simples, e pois isso me dei o trabalho de fazer um bônus: uma espécie de "notification maker". No canto superior esquerdo, clique na "?", invisível primeiramente, insira seus próprios dados e envie sua notificação, totalmente personalizada!
+Gostei muito do resultado e estou pronto para o próximo já!
