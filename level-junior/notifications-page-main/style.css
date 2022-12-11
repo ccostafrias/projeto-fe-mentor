@@ -103,16 +103,26 @@ section{
     width: 95%;
     padding: 20px;
     height: fit-content;
+    transition: all 0.3s ;
 }
 .notification-avatar{
     height: 50px;
 }
+a .notification-post-img{
+    border-radius: 10px;
+    height: 50px;
+}
+a .notification-post-img:hover{
+    box-shadow: 0 0 0 3px var(--color-blue-grayish-2);
+}
 .notification-content{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .notification-txt{
+    hyphens: auto;
     position: relative;
 }
 .notification-card:is(.active){
@@ -136,15 +146,9 @@ section{
     color: var(--color-blue-dark);
     font-weight: bold;
 }
-.profile-perfil::after{
-    content: "\a0";
-}
 .post-title{
     color: var(--color-blue-grayish-dark);
     font-weight: bold;
-}
-.post-title::before{
-    content: "\a0";
 }
 .private-messsage{
     cursor: text;
@@ -157,8 +161,36 @@ section{
 .private-messsage:hover{
     background-color: var(--color-blue-grayish-2);
 }
+.notification-message::after,
+.notification-message::before,
+.profile-perfil::after,
+.post-title::before
+{
+    content: "\a0";
+}
 input[type="button"]{
+    cursor: pointer;
+    transition: all 0.3s;
+    color: transparent;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    padding: 5px 8px;
+    appearance: none;
     position: fixed;
     top: 10px;
     left: 10px;
+    font-size: var(--fs-500);
+}
+input[type="button"]:hover{
+    color: white;
+    box-shadow: inset 0px 0px 0px 3px white;
+    mix-blend-mode: difference;
+}
+@media (max-width: 600px){
+    main{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
 }
