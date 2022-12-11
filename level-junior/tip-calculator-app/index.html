@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <div id="body-content">
+    <header>
+      <img src="./images/logo.svg" alt="">
+    </header>
+    <section>
+      <article id="left-content">
+        <div id="bill-wrapper">
+          <label for="payment-bill">Bill</label>
+          <div id="payment-bill-wrapper" class="input-number-wrapper"><input class="input-number" type="number" name="payment-bill" placeholder="0"></div>
+        </div>
+        <div id="tipSelect-wrapper">
+          <label for="tipSelect">Select Tip %</label>
+          <div id="tip-buttons-wrapper">
+            <label for="tip-radio-1" class="tip-buttons">
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-1">
+              5%
+            </label>
+            <label for="tip-radio-2" class="tip-buttons">
+              10%
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-2">
+            </label>
+            <label for="tip-radio-3" class="tip-buttons">
+              15%
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-3">
+            </label>
+            <label for="tip-radio-4" class="tip-buttons">
+              25%
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-4">
+            </label>
+            <label for="tip-radio-5" class="tip-buttons">
+              50%
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-5">
+            </label>
+            <div>
+              <input class="input-number" type="number" name="tip-select" id="tip-select" placeholder="Custom" onfocus="this.parentElement.getElementsByClassName('input-radio')[0].checked = true">
+              <input class="input-radio" type="radio" name="tip-radio" id="tip-radio-6">
+            </div>
+          </div>
+        </div>
+        <div id="peopleNum-wrapper">
+          <label for="payment-people">Number of People</label>
+          <div id="payment-people-wrapper" class="input-number-wrapper"><input class="input-number" type="number" name="payment-people" id="payment-people" placeholder="0"></div>
+        </div>
+      </article>
+      <article id="right-content">
+        <div id="tip-content-wrapper">
+          <div class="tip-content">
+            <div class="tip-wrapper">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="tip-value">$0.00</p>
+          </div>
+          <div class="tip-content">
+            <div class="tip-wrapper">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <p class="tip-value">$0.00</p>
+          </div>
+        </div>
+        <input class="button" type="button" value="Reset">
+      </article>
+    </section>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>

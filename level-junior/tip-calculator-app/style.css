@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-white: hsl(0, 0%, 100%);
+    --color-cyan: hsl(172, 67%, 45%);
+    --color-cyan-dark: hsl(183, 100%, 15%);
+    --color-cyan-grayish: hsl(184, 14%, 56%);
+    --color-cyan-grayish-dark: hsl(186, 14%, 43%);
+    --color-cyan-grayish-light-1: hsl(185, 41%, 84%);
+    --color-cyan-grayish-light-2: hsl(189, 41%, 97%);
+
+    --font-main: 'Space Mono', monospace;
+
+    /*Font size (form inputs): 24px*/
+    --fs-xl: 2rem;
+    --fs-600: 1rem;
+    --fs-500: 0.8rem;
+    --fs-400: 0.7rem;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color: var(--color-cyan) !important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0; 
+}
+p{
+    color: var(--color-cyan-grayish);
+}
+html, body{
+    min-height: 100vh;
+}
+body, input, textarea{
+    font-family: var(--font-main);
+    color: var(--color-cyan-dark);
+}
+body{
+    position: relative;
+    background-color: var(--color-cyan-grayish-light-1);
+    font-family: var(--font-main);
+    width: 100%;
+}
+#body-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+section{
+    display: flex;
+    gap: 20px;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+}
+section > *{
+    flex: 1;
+}
+#left-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.input-number-wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.input-number-wrapper::before{
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+}
+input.input-number{
+    color: var(--color-cyan-dark);
+    cursor: auto;
+    background-color: var(--color-cyan-grayish-light-2);
+    border: none;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: var(--fs-600);
+    border-radius: 5px;
+    width: 100%;
+}
+input.input-radio{
+    display: none;
+}
+label:has(input.input-radio:checked){
+    background-color: var(--color-cyan);
+    color: var(--color-cyan-dark);
+}
+.input-number:focus{
+    outline: 2px solid var(--color-cyan);
+}
+.input-number::placeholder{
+    color: var(--color-cyan-grayish);
+}
+#payment-bill-wrapper::before{
+    content: url('./images/icon-dollar.svg');
+}
+#tip-buttons-wrapper{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+.tip-buttons{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: var(--fs-600);
+    background-color: var(--color-cyan-dark);
+    color: var(--color-white);
+}
+#payment-people-wrapper::before{
+    content: url('./images/icon-person.svg');
+}
+#right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-cyan-dark);
+    padding: 30px;
+    border-radius: 10px;
+}
+#tip-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tip-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.tip-wrapper :first-child{
+    font-size: var(--fs-500);
+    color: var(--color-white);
+}
+.tip-wrapper :last-child{
+    font-size: var(--fs-400);
+}
+.tip-value{
+    font-size: var(--fs-xl);
+    color: var(--color-cyan);
+}
+.button{
+    cursor: not-allowed;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: var(--fs-600);
+    background-color: var(--color-cyan);
+    text-transform: uppercase;
+    opacity: .5;
+}
