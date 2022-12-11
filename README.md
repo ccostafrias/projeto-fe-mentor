@@ -7,7 +7,7 @@
 - [Desafios](#desafios)
   - [News homepage](#news-homepage)
   - [Dropdown navigation](#dropdown-navigation)
-  - [Notification page](#notification-page)
+  - [Notifications page](#notifications-page)
 
 ## Desafios
 
@@ -66,7 +66,7 @@ Outro desafio simples, mas com um resultado bem bacana. Pude explorar um pouco d
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
-### Notification Page
+### Notifications Page
 
 Nível de dificuldade = **Junior**<br>
 Essa é a solução para o desafio [Notifications page](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC).
@@ -89,5 +89,5 @@ Essa é a solução para o desafio [Notifications page](https://www.frontendment
 
 #### Conclusão
 
-Um desafio com layout simples, e pois isso me dei o trabalho de fazer um bônus: uma espécie de "notification maker". No canto superior esquerdo, clique na "?", invisível primeiramente, insira seus próprios dados e envie sua notificação, totalmente personalizada!
+Um desafio com layout simples, e por isso me dei o trabalho de fazer um bônus: uma espécie de "notifications maker". No canto superior esquerdo, clique na **?** (invisível primeiramente), insira seus próprios dados e envie sua notificação, totalmente personalizada!
 Gostei muito do resultado e estou pronto para o próximo já!
