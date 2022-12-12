@@ -8,6 +8,7 @@
   - [News homepage](#news-homepage)
   - [Dropdown navigation](#dropdown-navigation)
   - [Notifications page](#notifications-page)
+  - [Tip calculator](#tip-calculator)
 
 ## Desafios
 
@@ -91,3 +92,30 @@ Essa é a solução para o desafio [Notifications page](https://www.frontendment
 
 Um desafio com layout simples, e por isso me dei o trabalho de fazer um bônus: uma espécie de "notifications maker". No canto superior esquerdo, clique na **?** (invisível primeiramente), insira seus próprios dados e envie sua notificação, totalmente personalizada!
 Gostei muito do resultado e estou pronto para o próximo já!
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Tip calculator
+
+Nível de dificuldade = **Junior**<br>
+Essa é a solução para o desafio [Tip calculator app](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-junior/tip-calculator-app/index.html)
+
+<p align="center">
+    <img alt="" src="./readme-images/tip-calculator-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/tip-calculator-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Flexbox display
+- Grid display
+- JavaScript com DOM elements
+
+#### Conclusão
+
+A parte do HTML e do CSS foram bem tranquilas, o maior trabalho foi em deixar o script em JS bem limpo e tirar a maioria dos bugs e erros possíveis.
