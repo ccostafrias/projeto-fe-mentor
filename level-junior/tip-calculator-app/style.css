@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 :root{
+    --color-red: hsl(0, 100%, 37%);
     --color-white: hsl(0, 0%, 100%);
     --color-cyan: hsl(172, 67%, 45%);
     --color-cyan-dark: hsl(183, 100%, 15%);
@@ -13,14 +14,15 @@
     --color-cyan-grayish-dark: hsl(186, 14%, 43%);
     --color-cyan-grayish-light-1: hsl(185, 41%, 84%);
     --color-cyan-grayish-light-2: hsl(189, 41%, 97%);
+    --color-black-shadow: rgb(0, 0, 0, .1);
 
     --font-main: 'Space Mono', monospace;
 
     /*Font size (form inputs): 24px*/
     --fs-xl: 2rem;
     --fs-600: 1rem;
-    --fs-500: 0.8rem;
-    --fs-400: 0.7rem;
+    --fs-500: 0.7rem;
+    --fs-400: 0.6rem;
 
 }
 a{
@@ -69,8 +71,9 @@ section{
     background-color: var(--color-white);
     padding: 30px;
     border-radius: 20px;
-    max-width: 600px;
-    width: 90%;
+    max-width: 650px;
+    width: 95%;
+    box-shadow: 0px 0px 20px 0px var(--color-black-shadow);
 }
 section > *{
     flex: 1;
@@ -79,7 +82,7 @@ section > *{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 .input-number-wrapper{
     display: flex;
@@ -106,6 +109,33 @@ input.input-number{
 input.input-radio{
     display: none;
 }
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.content-wrapper:has(.warning-advice.active) .input-number{
+    outline: 2px solid var(--color-red);
+}
+.label-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.warning-advice{
+    display: none;
+    opacity: .5;
+    color: var(--color-red);
+    font-size: var(--fs-500);
+}
+.warning-advice.active{
+    display: block;
+}
+.label-title{
+    color: var(--color-cyan-grayish-dark);
+    font-size: var(--fs-500);
+}
 label:has(input.input-radio:checked){
     background-color: var(--color-cyan);
     color: var(--color-cyan-dark);
@@ -131,9 +161,12 @@ label:has(input.input-radio:checked){
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
     border-radius: 5px;
     font-size: var(--fs-600);
     background-color: var(--color-cyan-dark);
+}
+.tip-buttons :first-child{
     color: var(--color-white);
 }
 #payment-people-wrapper::before{
@@ -143,6 +176,7 @@ label:has(input.input-radio:checked){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
     background-color: var(--color-cyan-dark);
     padding: 30px;
     border-radius: 10px;
@@ -178,4 +212,20 @@ label:has(input.input-radio:checked){
     background-color: var(--color-cyan);
     text-transform: uppercase;
     opacity: .5;
+}
+
+@media (max-width: 550px){
+    #body-content{
+        margin-top: 50px;
+        height: 100%;
+    }
+    section{
+        width: 100%;
+        flex-direction: column;
+        border-radius: 20px 20px 0 0;
+    }
+    #tip-buttons-wrapper{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);     
+    }
 }
