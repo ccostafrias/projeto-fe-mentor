@@ -9,7 +9,8 @@
   - [Dropdown navigation](#dropdown-navigation)
   - [Notifications page](#notifications-page)
   - [Tip calculator](#tip-calculator)
-  - [Testimonials grid](testimonials-grid)
+  - [Testimonials grid](#testimonials-grid)
+  - [Time tracking](#time-tracking)
 
 ## Desafios
 
@@ -123,7 +124,7 @@ A parte do HTML e do CSS foram bem tranquilas, o maior trabalho foi em deixar o 
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
-### Testimonials Grid
+### Testimonials grid
 
 Nível de dificuldade = **Junior**<br>
 Essa é a solução para o desafio [Testimonials Grid Section](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
@@ -146,3 +147,31 @@ Essa é a solução para o desafio [Testimonials Grid Section](https://www.front
 #### Conclusão
 
 Provavelmente o desafio mais fácil até agora, ou pelo menos o que levei menos tempo. Envolve alguns conhecimentos de grid, mas nada que uma aulinha rápida não sane todas as dúvidas sobre o assunto.
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Time tracking
+
+Nível de dificuldade = **Junior**<br>
+Essa é a solução para o desafio [Time tracking dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
+
+#### Screenshots
+
+[Minha resolução](ccostafrias.github.io/projeto-fe-mentor/level-junior/time-tracking-dashboard/index.html)
+
+<p align="center">
+    <img alt="" src="./readme-images/time-tracking-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/time-tracking-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Flexbox display
+- Grid display
+- JavaScript com DOM elements
+- Arquivo JSON
+
+#### Conclusão
+
+Um dos resultados que mais me agradou, porém o mais frustrante. Tentei procurar como importar um arquivo JSON para então transformá-lo em um objeto, mas por ser *newbie* nesta área, fracassei miseravelmente e simplesmente colei o arquivo JSON no meu próprio scrip em JS. Contudo, esta pequena intempérie não afetou o resultado final, o qual ficou bem legal e fiél ao original.
