@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body onload="setCardContent('weekly'), radioEventListener()">
+  <div id="body-content">
+    <section>
+      <article id="person-data">
+        <div id="person-profile-wrapper" class="padding-around">
+          <img src="./images/image-jeremy.png" alt="avatar Jeremy">
+          <hgroup>
+            <h2>Report for</h2>
+            <h1>Jeremy Robson</h1>
+          </hgroup>
+        </div>
+        <div id="radio-date-wrapper" class="padding-around">
+          <div class="radio-parent">
+            <input type="radio" class="radio-date" name="radio-date" id="radio-date-1">
+            <label for="radio-date-1">Daily</label>
+          </div>
+          <div class="radio-parent">
+            <input type="radio" class="radio-date" name="radio-date" id="radio-date-2" checked>
+            <label for="radio-date-2">Weekly</label>
+          </div>
+          <div class="radio-parent">
+            <input type="radio" class="radio-date" name="radio-date" id="radio-date-3">
+            <label for="radio-date-3">Monthly</label>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Work</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">5hrs</p>
+            <p class="p-previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Play</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">1hr</p>
+            <p class="p-previous">Last day - 2hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Study</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">0hrs</p>
+            <p class="p-previous">Last day - 1hr</p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Exercise</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">1hr</p>
+            <p class="p-previous">Last day - 1hr</p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Social</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">1hr</p>
+            <p class="p-previous">Last day - 3hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-content padding-around">
+          <div class="title-wrapper">
+            <h2>Selfcare</h2>
+            <img src="./images/icon-ellipsis.svg" alt="card options">
+          </div>
+          <div class="p-wrapper">
+            <p class="p-actual">0hrs</p>
+            <p class="p-previous">Last day - 1hr</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
