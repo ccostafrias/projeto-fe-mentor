@@ -66,10 +66,13 @@ article header{
     flex-direction: row;
     gap: 20px;
 }
-article header img{
+article img{
     height: 30px;
     width: 30px;
     border-radius: 50%;
+}
+article.purple-border img{
+    box-shadow: 0 0 0 2px hsl(263, 70%, 65%);;
 }
 article hgroup{
     display: flex;
@@ -81,7 +84,7 @@ article :is(h1, h2, q){
     font-weight: normal;
 }
 article.light-text{
-    color: var(--color-gray-light);
+    color: var(--color-white);
 }
 article.dark-text{
     color: var(--color-blue-grayish-dark);
@@ -95,7 +98,6 @@ article p{
 }
 article.light-text p{
     color: var(--color-white);
-    opacity: .7;
 }
 article q{
     quotes: "“ " " ”" "‘" "’";
