@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body onload="load()">
+  <div id="body-content">
+    <header id="hd-score">
+      <img src="images/logo-bonus.svg" alt="">
+      <div id="score-wrapper">
+        <h2>Score</h2>
+        <p>12</p>
+      </div>
+    </header>
+    <main class="">
+      <section id="sec-choose">
+        <img id="pentg" src="images/bg-pentagon.svg" alt="pentagon">
+        <div id="card-wrapper">
+          <div class="card-out card-choose card-scissors">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+          <div class="card-out card-choose card-paper">
+            <div class="card-inner"><img src="" alt=""></div> 
+          </div>
+          <div class="card-out card-choose card-rock">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+          <div class="card-out card-choose card-lizard">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+          <div class="card-out card-choose card-spock">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section id="sec-game">
+        <div class="card-game-wrapper" id="game-left">
+          <h2>You Picked</h2>
+          <div class="card-out card-game">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+        </div>
+        <div id="wl-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.96 358.98" >
+            <text>Scalable text</text>
+          </svg>
+          <input type="button" value="Play Again" class="bttn-fill" onclick="">
+        </div>
+        <div class="card-game-wrapper" id="game-right">
+          <h2>The House Picked</h2>
+          <div class="card-out card-standby card-game">
+            <div class="card-inner"><img src="" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section id="sec-rules">
+        <div id="rules-card">
+          <div id="rules-hd">
+            <h1>Rules</h1>
+            <span class="bttn-close" onclick="showRules()">
+              <img src="images/icon-close.svg" alt="">
+            </span>
+          </div>
+          <div id="rules-content">
+            <img src="images/image-rules-bonus.svg" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <input type="button" value="Rules" class="bttn-nofill" onclick="showRules()">
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
