@@ -237,16 +237,8 @@ main.active #sec-game{
     justify-content: center;
     transition: all 1s cubic-bezier(0, 0, 0, 1.45);
 }
-svg{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-text{
-    transform: translate(0, 50%);
-    font-size: 5em;
-    fill: var(--color-white);
+#wl-wrapper h2{
+    font-size: var(--fs-xl);
 }
 .bttn-fill{
     cursor: pointer;
@@ -258,20 +250,23 @@ text{
     font-size: var(--fs-400);
     font-weight: normal;
     color: var(--color-dark-text);
+    transform: scale(1) translateY(0px);
     transition: transform .3s;
 }
 .bttn-fill:hover{
-    transform: translateY(10px);
+    transform: scale(1.1) translateY(-5px);
 }
 #wl-wrapper.active{
-    width: 230px;
+    width: 290px;
     height: fit-content;
 }
 .card-game{
     position: static;
 }
-
-
+.card-standby .card-inner{
+    box-shadow: none;
+    background-color: var(--color-dark-text);
+}
 /*Toggle section*/
 main.active #sec-choose{
     display: none;
