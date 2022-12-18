@@ -58,6 +58,17 @@ function changeScore(){
     setItem("score", score)
 }
 
+function wlEffectCreate(element){
+    for (let i = 0; i < 3; i++) {
+        var wlEffect = document.createElement('div')
+        element.appendChild(wlEffect)
+        wlEffect.classList.add('wl-effect')
+        wlEffect.style.width = 250+70*(i)+"px"
+        wlEffect.style.height = 250+70*(i)+"px"
+        wlEffect.style.opacity = .8 - (3*i/10)
+    }
+}
+
 function startGame(cardChoosed){
     main.classList.toggle("active")
     cardGamePlayer.classList.add(cardChoosed)
@@ -72,12 +83,14 @@ function startGame(cardChoosed){
         }else if (cardPowerHierarchy[choosedCard]['wins'].indexOf(randomCard) != -1){
             wlTxt.textContent = "You\u00A0Win"
             score ++
+            wlEffectCreate(cardGamePlayer.parentElement)
         }else{
             wlTxt.textContent = "You\u00A0Loose"
             score --
             if (score < 0){
                 score = 0
             }
+            wlEffectCreate(cardBotPlayer.parentElement)
         }
         changeScore()
         // setTimeout(() => {
@@ -92,4 +105,7 @@ function endGame(){
     cardBotPlayer.classList.add("card-standby")
     cardGamePlayer.classList.remove(cardGamePlayer.classList[2])
     cardGamePlayer.classList
+    document.querySelectorAll(".wl-effect").forEach( element => {
+        element.remove()
+    });
 }
