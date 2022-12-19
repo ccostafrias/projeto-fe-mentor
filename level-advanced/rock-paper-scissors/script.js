@@ -63,8 +63,6 @@ function wlEffectCreate(element){
         var wlEffect = document.createElement('div')
         element.appendChild(wlEffect)
         wlEffect.classList.add('wl-effect')
-        wlEffect.style.width = 250+70*(i)+"px"
-        wlEffect.style.height = 250+70*(i)+"px"
         wlEffect.style.opacity = .8 - (3*i/10)
     }
 }
