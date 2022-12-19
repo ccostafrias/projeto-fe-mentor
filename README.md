@@ -11,6 +11,7 @@
   - [Tip calculator](#tip-calculator)
   - [Testimonials grid](#testimonials-grid)
   - [Time tracking](#time-tracking)
+  - [Rock paper scissors](#rock-paper-scissors)
 
 ## Desafios
 
@@ -175,3 +176,32 @@ Essa é a solução para o desafio [Time tracking dashboard](https://www.fronten
 #### Conclusão
 
 Um dos resultados que mais me agradou, porém o mais frustrante. Tentei procurar como importar um arquivo JSON para então transformá-lo em um objeto, mas por ser *newbie* nesta área, fracassei miseravelmente e simplesmente colei o arquivo JSON no meu próprio scrip em JS. Contudo, esta pequena intempérie não afetou o resultado final, o qual ficou bem legal e fiél ao original.
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Rock paper scissors
+
+Nível de dificuldade = **Avançado**<br>
+Essa é a solução para o desafio [Rock, Paper, Scissors game](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-advanced/rock-paper-scissors/index.html)
+
+<p align="center">
+    <img alt="" src="./readme-images/rps-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/rps-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- Grid display
+- JavaScript com DOM elements
+- Arquivo JSON
+
+#### Conclusão
+
+Decidi ir um pouco além e aumentar o nível de dificuldade dos desafios e fiz um "rock paper scissors" versão *Big Bang Theory*. A parte mais difícil foi deixar o layout o mais responsivo para todas as reoluções possíveis e apesar de todos os esforços, ainda não ficou 100%, mas tentei o meu melhor. O que importa é queo resultado ficou agradável, apesar de ser um jogo simples que é baseado em sorte basicamente.
