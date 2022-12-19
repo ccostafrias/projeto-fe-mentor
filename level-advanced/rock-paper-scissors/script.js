@@ -63,7 +63,7 @@ function wlEffectCreate(element){
         var wlEffect = document.createElement('div')
         element.appendChild(wlEffect)
         wlEffect.classList.add('wl-effect')
-        wlEffect.style.opacity = .8 - (3*i/10)
+        wlEffect.style.opacity = .4- (1*i/10)
     }
 }
 
@@ -81,14 +81,14 @@ function startGame(cardChoosed){
         }else if (cardPowerHierarchy[choosedCard]['wins'].indexOf(randomCard) != -1){
             wlTxt.textContent = "You\u00A0Win"
             score ++
-            wlEffectCreate(cardGamePlayer.parentElement)
+            wlEffectCreate(cardGamePlayer)
         }else{
             wlTxt.textContent = "You\u00A0Loose"
             score --
             if (score < 0){
                 score = 0
             }
-            wlEffectCreate(cardBotPlayer.parentElement)
+            wlEffectCreate(cardBotPlayer)
         }
         changeScore()
         // setTimeout(() => {
