@@ -4,11 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Opa</h1>
-    <main></main>
+    <header>
+        <h1>Where is the world?</h1>
+        <button class="bttn-tggl-mode">Dark Mode</button>
+    </header>
+    <main>
+        <div class="input-wrapper">
+            <input type="search" name="search" id="search">
+            <select name="regions" id="regions">
+                <option value="" selected>Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        <div class="cards-table">
+            <div class="card template">
+                <img class="flag" src="">
+                <div class="card-content">
+                    <h2 class="country-name"></h2>
+                    <div class="country-info">
+                        <p><span class="bolder">Population: </span><span class="subject"></span></p>
+                        <p><span class="bolder">Region: </span><span class="subject"></span></p>
+                        <p><span class="bolder">Capital: </span><span class="subject"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 <script src="script.js"></script>
 </body>
