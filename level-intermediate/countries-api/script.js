@@ -54,7 +54,11 @@ selectRegions.addEventListener('input', () => {
 })
 
 searchInput.addEventListener('input', () => {
-  const filterSearch = countries.filter(country => String(country.name).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase()))
+  const filterSearch = countries.filter(country => {
+    const includesCountry = String(country.name).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
+    const includesCapital = String(country.capital).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
+    if (includesCountry || includesCapital) return country
+  })
   startCountries(filterSearch)
 })
 
