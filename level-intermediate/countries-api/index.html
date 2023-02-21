@@ -24,41 +24,28 @@
                         <ion-icon name="search-outline"></ion-icon>
                         <input type="search" name="search" id="search" size="50" placeholder="Search for a country...">
                     </div>
-                    <select name="regions" id="regions">
-                        <option value="" selected>Filter by Region</option>
-                        <option value="Africa">Africa</option>
-                        <option value="Americas">Americas</option>
-                        <option value="Asia">Asia</option>
-                        <option value="Europe">Europe</option>
-                        <option value="Oceania">Oceania</option>
-                    </select>
-                    <!-- <details class="custom-select">
-                        <summary class="radios">
-                            <input type="radio" name="item" id="default" title="Filter by Region" checked>
-                            <input type="radio" name="item" id="item1" title="Item 1">
-                            <input type="radio" name="item" id="item2" title="Item 2">
-                            <input type="radio" name="item" id="item3" title="Item 3">
-                            <input type="radio" name="item" id="item4" title="Item 4">
-                            <input type="radio" name="item" id="item5" title="Item 5">
-                        </summary>
-                        <ul class="list">
-                            <li>
-                                <label for="item1">Africa</label>
-                            </li>
-                            <li>
-                                <label for="item2">Americas</label>
-                            </li>
-                            <li>
-                                <label for="item3">Asia</label>
-                            </li>
-                            <li>
-                                <label for="item4">Europe</label>
-                            </li>
-                            <li>
-                                <label for="item5">Oceania</label>
-                            </li>
-                        </ul>
-                    </details> -->
+                    <div class="selects">
+                        <div class="select-wrapper">
+                            <select name="order" id="order">
+                                <option value="name/-1">A-Z ↑</option>
+                                <option value="name/1">A-Z ↓</option>
+                                <option value="population/1" selected>Population ↑</option>
+                                <option value="population/-1">Population ↓</option>
+                            </select>
+                            <ion-icon name="chevron-down" class="select-icon"></ion-icon>
+                        </div>
+                        <div class="select-wrapper">
+                            <select name="regions" id="regions">
+                                <option value="" selected>Filter by Region</option>
+                                <option value="Africa">Africa</option>
+                                <option value="Americas">Americas</option>
+                                <option value="Asia">Asia</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Oceania">Oceania</option>
+                            </select>
+                            <ion-icon name="chevron-down" class="select-icon"></ion-icon>
+                        </div>
+                    </div>
                 </div>
                 <div class="cards-table">
                 </div>

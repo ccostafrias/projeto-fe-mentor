@@ -3,6 +3,7 @@ const countries = []
 const cardsTable = document.querySelector('.cards-table')
 const cardTemplate = document.querySelector('.card, .template')
 const selectRegions = document.getElementById('regions')
+const selectOrder = document.getElementById('order')
 const searchInput = document.getElementById('search')
 
 //Set cards with countries
@@ -23,8 +24,24 @@ observer.observe({
   entryTypes: ["resource"]
 });
 
-function startCountries(countriesTo) {
-  cardsTable.innerHTML = sortCountries(countriesTo)
+function startCountries(countriesTo = countries) {
+  const [param, order] = selectOrder.value.split('/')
+
+  if (selectRegions.value == '') {
+    countriesTo = countries
+  } else {
+    countriesTo = countries.filter(country => country.region == selectRegions.options[selectRegions.selectedIndex].value)
+  }
+
+  if (searchInput.value !== ''){
+    countriesTo = countriesTo.filter(country => {
+      const includesCountry = String(country.name).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
+      const includesCapital = String(country.capital).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
+      if (includesCountry || includesCapital) return country
+    })
+  }
+
+  cardsTable.innerHTML = sortCountries(countriesTo, param, order)
     .map(country => {
       return `<div class='card' data-country='${country.name}'>
                 <img class='flag' src='${country.flags.png}'>
@@ -41,33 +58,19 @@ function startCountries(countriesTo) {
     .join('')
 }
 
-function sortCountries(toSort, p = 'population', lm = 1) {
+function sortCountries(toSort, param = 'population', order = 1) {
   return toSort.sort((fcountry, scountry) => {
-    if (fcountry[p] > scountry[p]) {
-      return -1 * lm
+    if (fcountry[param] > scountry[param]) {
+      return -1 * order
     } else {
-      return 1 * lm
+      return 1 * order
     }
   })
 }
 
-selectRegions.addEventListener('input', () => {
-  if (selectRegions.value == '') {
-    startCountries(countries)
-  } else {
-    const filterRegion = countries.filter(country => country.region == selectRegions.options[selectRegions.selectedIndex].value)
-    startCountries(filterRegion)
-  }
-})
-
-searchInput.addEventListener('input', () => {
-  const filterSearch = countries.filter(country => {
-    const includesCountry = String(country.name).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
-    const includesCapital = String(country.capital).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
-    if (includesCountry || includesCapital) return country
-  })
-  startCountries(filterSearch)
-})
+selectRegions.addEventListener('input', startCountries)
+selectOrder.addEventListener('input', startCountries)
+searchInput.addEventListener('input', startCountries)
 
 //Toggle scheme (light & dark)
 
@@ -185,8 +188,9 @@ cardsTable.addEventListener('mouseup', e => {
 const bttnBack = document.querySelector('.bttn-back-section')
 bttnBack.addEventListener('click', toggleSection)
 
-function toggleSection(){
+function toggleSection() {
   document.querySelector('.all-cards-sec').style.display = 'inline-block'
+  document.querySelector('.country-card').style.display = 'flex'
   document.querySelector('.country-card').style.marginTop = `${actualScroll}px`
   window.scroll(0, actualScroll)
   setTimeout(() => {
@@ -200,11 +204,13 @@ let actualScroll = window.scrollY
 
 sections.forEach(section => {
   section.addEventListener('transitionend', e => {
-    if (e.target === section){
-      if (section.classList.contains('active')){
+    if (e.target === section) {
+      if (section.classList.contains('active')) {
         document.querySelector('.all-cards-sec').style.display = 'none'
         document.querySelector('.country-card').style.marginTop = `0px`
         window.scroll(0, 0)
+      } else {
+        document.querySelector('.country-card').style.display = 'none'
       }
     }
   })
