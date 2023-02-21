@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,92 @@
     <link rel="stylesheet" href="style.css">
     <title>Where is the world?</title>
 </head>
+
 <body>
     <header>
         <h1>Where is the world?</h1>
-        <button class="bttn-tggl-mode">
-            <ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span>
+        <button class="bttn-tggl">
+            <ion-icon name="moon-outline" id="moon"></ion-icon><span>Dark Mode</span>
         </button>
     </header>
     <main>
-        <div class="input-wrapper">
-            <div class="search-wrapper">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="search" name="search" id="search" size="50" placeholder="Search for a country...">
+        <section class="all-cards-sec ">
+            <div class="all-cards">
+                <div class="input-wrapper">
+                    <div class="search-wrapper">
+                        <ion-icon name="search-outline"></ion-icon>
+                        <input type="search" name="search" id="search" size="50" placeholder="Search for a country...">
+                    </div>
+                    <select name="regions" id="regions">
+                        <option value="" selected>Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <!-- <details class="custom-select">
+                        <summary class="radios">
+                            <input type="radio" name="item" id="default" title="Filter by Region" checked>
+                            <input type="radio" name="item" id="item1" title="Item 1">
+                            <input type="radio" name="item" id="item2" title="Item 2">
+                            <input type="radio" name="item" id="item3" title="Item 3">
+                            <input type="radio" name="item" id="item4" title="Item 4">
+                            <input type="radio" name="item" id="item5" title="Item 5">
+                        </summary>
+                        <ul class="list">
+                            <li>
+                                <label for="item1">Africa</label>
+                            </li>
+                            <li>
+                                <label for="item2">Americas</label>
+                            </li>
+                            <li>
+                                <label for="item3">Asia</label>
+                            </li>
+                            <li>
+                                <label for="item4">Europe</label>
+                            </li>
+                            <li>
+                                <label for="item5">Oceania</label>
+                            </li>
+                        </ul>
+                    </details> -->
+                </div>
+                <div class="cards-table">
+                </div>
             </div>
-            <select name="regions" id="regions">
-                <option value="" selected>Filter by Region</option>
-                <option value="Africa">Africa</option>
-                <option value="Americas">Americas</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="Oceania">Oceania</option>
-            </select>
-        </div>
-        <div class="cards-table">
-            <div class="card template">
-                <img class="flag" src="">
-                <div class="card-content">
-                    <h2 class="country-name"></h2>
-                    <div class="country-info">
-                        <p><span class="bolder">Population: </span><span class="subject"></span></p>
-                        <p><span class="bolder">Region: </span><span class="subject"></span></p>
-                        <p><span class="bolder">Capital: </span><span class="subject"></span></p>
+        </section>
+        <section class="country-card">
+            <button class="bttn-back-section">
+                <ion-icon name="arrow-back-outline" id="moon"></ion-icon><span>Back</span>
+            </button>
+            <div class="country-wrapper">
+                <img src="https://flagcdn.com/w320/cn.png" class="country-flag">
+                <div class="country-content">
+                    <h2>China</h2>
+                    <div class="country-stats">
+                        <p><span class='bolder'>Native Name: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Population: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Region: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Sub Region: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Capital: </span><span class='subject'></span></p>
+                    </div>
+                    <div class="country-stats">
+                        <p><span class='bolder'>Top Level Domain: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Currencies: </span><span class='subject'></span></p>
+                        <p><span class='bolder'>Languages: </span><span class='subject'></span></p>
+                    </div>
+                    <div class="country-borders">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-<script src="script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
