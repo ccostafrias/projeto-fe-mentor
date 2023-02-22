@@ -26,7 +26,7 @@
                     </div>
                     <div class="selects">
                         <div class="select-wrapper">
-                            <select name="order" id="order">
+                            <select name="order" id="order" aria-label="Select order">
                                 <option value="name/-1">A-Z ↑</option>
                                 <option value="name/1">A-Z ↓</option>
                                 <option value="population/1" selected>Population ↑</option>
@@ -35,8 +35,9 @@
                             <ion-icon name="chevron-down" class="select-icon"></ion-icon>
                         </div>
                         <div class="select-wrapper">
-                            <select name="regions" id="regions">
-                                <option value="" selected>Filter by Region</option>
+                            <select name="regions" id="regions" aria-label="Select region">
+                                <option value="" style="display: none;" selected>Filter by Region</option>
+                                <option value="">World</option>
                                 <option value="Africa">Africa</option>
                                 <option value="Americas">Americas</option>
                                 <option value="Asia">Asia</option>
@@ -53,7 +54,7 @@
         </section>
         <section class="country-card">
             <button class="bttn-back-section">
-                <ion-icon name="arrow-back-outline" id="moon"></ion-icon><span>Back</span>
+                <ion-icon name="arrow-back-outline"></ion-icon><span>Back</span>
             </button>
             <div class="country-wrapper">
                 <img src="https://flagcdn.com/w320/cn.png" class="country-flag">

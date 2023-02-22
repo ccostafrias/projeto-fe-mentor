@@ -33,29 +33,38 @@ function startCountries(countriesTo = countries) {
     countriesTo = countries.filter(country => country.region == selectRegions.options[selectRegions.selectedIndex].value)
   }
 
-  if (searchInput.value !== ''){
+  const regex = new RegExp(searchInput.value, 'gi')
+
+  if (searchInput.value !== '') {
     countriesTo = countriesTo.filter(country => {
-      const includesCountry = String(country.name).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
-      const includesCapital = String(country.capital).toLocaleLowerCase().includes(String(searchInput.value).toLocaleLowerCase())
-      if (includesCountry || includesCapital) return country
+      if (country.name.match(regex) !== null) return country
+      if (country.capital && country.capital.match(regex) !== null) return country
     })
   }
 
   cardsTable.innerHTML = sortCountries(countriesTo, param, order)
     .map(country => {
-      return `<div class='card' data-country='${country.name}'>
-                <img class='flag' src='${country.flags.png}'>
+      return `<div class='card'>
+                <img class='flag' src='${country.flags.png}' alt="${country.name} flag">
                 <div class='card-content'>
-                    <h2 class='country-name'>${country.name}</h2>
+                    <h2 class='country-name'>${setHighlight(country.name)}</h2>
                     <div class='country-info'>
                         <p><span class='bolder'>Population: </span><span class='subject'>${country.population.toLocaleString()}</span></p>
                         <p><span class='bolder'>Region: </span><span class='subject'>${country.region}</span></p>
-                        <p><span class='bolder'>Capital: </span><span class='subject'>${country.capital}</span></p>
+                        <p><span class='bolder'>Capital: </span><span class='subject'>${setHighlight(country.capital)}</span></p>
                     </div>
                 </div>
               </div>`
     })
     .join('')
+
+}
+
+function setHighlight(name){
+  if (searchInput.value == '' || name == undefined) return name
+
+  const regex = new RegExp(searchInput.value, 'gi')
+  return name.replace(regex, `<span class='highlight'>${name.match(regex)}</span>`)
 }
 
 function sortCountries(toSort, param = 'population', order = 1) {
@@ -99,7 +108,7 @@ const theme = {
   dark: {
     '--primary-color': 'var(--color-dark-blue)',
     '--secondary-color': 'var(--color-very-dark-blue)',
-    '--font-color': 'var(--color-white)'
+    '--font-color': 'var(--color-white)',
   },
   light: {
     '--primary-color': 'var(--color-white)',
@@ -153,12 +162,12 @@ cardsTable.addEventListener('mouseup', e => {
   const cardSelected = e.target.closest('.card')
   if (cardSelected) {
     toggleSection()
-    const countryName = cardSelected.dataset.country
+    const countryName = cardSelected.querySelector('.country-name').textContent
     const countrySelected = countries.find(country => country.name == countryName)
     // console.table(countrySelected)
 
     countryWrapper.innerHTML =
-      `<img src="${countrySelected.flags.png}" class="country-flag">
+      `<img src="${countrySelected.flags.png}" alt="${countrySelected.name} flag" class="country-flag">
     <div class="country-content">
         <h2>${countrySelected.name}</h2>
         <div class="country-stats-wrapper">

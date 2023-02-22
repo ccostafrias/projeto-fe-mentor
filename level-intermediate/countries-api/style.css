@@ -21,10 +21,6 @@
     --color-white: hsl(0, 0%, 100%);
     --color-box-shadow: rgb(0, 0, 0, .1);
 
-    --primary-color: var(--color-white);
-    --secondary-color: var(--color-very-light-gray);
-    --font-color: var(--color-very-dark-blue-plus);
-
     --font-main: 'Nunito Sans', sans-serif;
 
     --fs-xl: 2em;
@@ -96,6 +92,12 @@ section.active {
 }
 
 /*First section*/
+
+.highlight{
+    background-color: var(--font-color);
+    color: var(--secondary-color);
+    opacity: .5;
+}
 
 .all-cards {
     display: flex;
