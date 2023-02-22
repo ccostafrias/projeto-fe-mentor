@@ -12,6 +12,7 @@
   - [Testimonials grid](#testimonials-grid)
   - [Time tracking](#time-tracking)
   - [Rock paper scissors](#rock-paper-scissors)
+  - [Countries API](#countries-api)
 
 ## Desafios
 
@@ -204,4 +205,35 @@ Essa é a solução para o desafio [Rock, Paper, Scissors game](https://www.fron
 
 #### Conclusão
 
-Decidi ir um pouco além e aumentar o nível de dificuldade dos desafios e fiz um "rock paper scissors" versão *Big Bang Theory*. A parte mais difícil foi deixar o layout o mais responsivo para todas as reoluções possíveis e apesar de todos os esforços, ainda não ficou 100%, mas tentei o meu melhor. O que importa é queo resultado ficou agradável, apesar de ser um jogo simples que é baseado em sorte basicamente.
+Decidi ir um pouco além e aumentar o nível de dificuldade dos desafios e fiz um "rock paper scissors" versão *Big Bang Theory*. A parte mais difícil foi deixar o layout o mais responsivo para todas as reoluções possíveis e apesar de todos os esforços, ainda não ficou 100%, mas tentei o meu melhor. O que importa é que o resultado ficou agradável, apesar de ser um jogo simples baseado em pura sorte.
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Countries API
+
+Nível de dificuldade = **Avançado**<br>
+Essa é a solução para o desafio [REST Countries API with color theme switcher](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/countries-api/)
+
+<p align="center">
+    <img alt="" src="./readme-images/capi-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/capi-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- Grid display
+- JavaScript com DOM elements
+- Arquivo JSON
+- Manipulação de Array
+- Mudança de tema (dark & light)
+
+#### Conclusão
+
+Sem dúvidas o desafio mais complexo até agora, porém o mais agradável. Passei alguns dias trabalhando nesse projeto, mas o resultado final valeu super a pena. O curso comnplementar de Javascript do Wesbos certamente me ajudou muito com a manipulação de arrays e de arquivos JSON, além de outros detalhes menores como o scroll ao mudar de section. Estou muito contente com o resultado final!
