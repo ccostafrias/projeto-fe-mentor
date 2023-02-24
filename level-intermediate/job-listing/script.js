@@ -22,8 +22,10 @@ function setCompanies(array) {
         <div class="card-content">
           <div class="card-header">
             <h2 class="card-user">${item.company}</h2>
-            ${verifyParam(item, 'new')}
-            ${verifyParam(item, 'featured')}
+            <div class="hl-wrapper">
+                ${verifyParam(item, 'new')}
+                ${verifyParam(item, 'featured')}
+            </div>
           </div>
           <a href="#" class="card-position">${item.position}</a>
           <ul class="card-informations">
