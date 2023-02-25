@@ -13,6 +13,7 @@
   - [Time tracking](#time-tracking)
   - [Rock paper scissors](#rock-paper-scissors)
   - [Countries API](#countries-api)
+  - [Job Listings](#job-listings)
 
 ## Desafios
 
@@ -237,3 +238,32 @@ Essa é a solução para o desafio [REST Countries API with color theme switcher
 #### Conclusão
 
 Sem dúvidas o desafio mais complexo até agora, porém o mais agradável. Passei alguns dias trabalhando nesse projeto, mas o resultado final valeu super a pena. O curso comnplementar de Javascript do Wesbos certamente me ajudou muito com a manipulação de arrays e de arquivos JSON, além de outros detalhes menores como o scroll ao mudar de section. Estou muito contente com o resultado final!
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Job Listings
+
+Nível de dificuldade = **Intermediário**<br>
+Essa é a solução para o desafio [Job listings with filtering](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/job-listing/)
+
+<p align="center">
+    <img alt="" src="./readme-images/job-listing-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/job-listing-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- JavaScript com DOM elements
+- Arquivo JSON
+- Manipulação de Array e Objeto
+
+#### Conclusão
+
+Um desafio mais simples, mas com um resultado bem bacana.
