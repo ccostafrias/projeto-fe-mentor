@@ -32,9 +32,10 @@
 
 html,
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 body,
@@ -74,14 +75,12 @@ a {
 }
 
 .background{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
 
     width: 100vw;
     height: 100vh;
-
-    z-index: -1;
 }
 
 .background-img{
@@ -92,18 +91,19 @@ a {
     background-size: cover;
 
     box-shadow: 0 10px 10px var(--box-shadow);
+    z-index: 1;
 }
 
 #map { 
     flex: 1 0 auto;
-    z-index: -1;
-}
-
-.leaflet-control-zoom{
-    display: none;
+    z-index: 0;
 }
 
 .content{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +111,6 @@ a {
 
     width: 100%;
     transform: scale(.8);
-    z-index: 1;
 }
 
 .search-box{
@@ -132,7 +131,7 @@ a {
 .search-wrapper{
     display: flex;
     flex-direction: row;
-    max-width: 550px;
+    max-width: 600px;
     width: 90%;
 
     overflow: hidden;
@@ -209,4 +208,58 @@ a {
 .info p{
     font-size: var(--fs-600);
     font-weight: var(--fw-medium);
+}
+
+
+@media (max-width: 720px){
+    :root{
+        --fs-xl: 1.7rem;
+        --fs-600: 1.2rem;
+        --fs-500: .8rem;
+        --fs-400: .5rem;
+    }
+
+    .background{
+        width: auto;
+        height: auto;
+    }
+
+    #map{
+        flex: 1 0 500px;
+    }
+
+    .content{
+        transform: scale(1);
+        padding: 30px 0;
+        gap: 20px;
+    }
+
+    .search-wrapper{
+        width: 90%;
+    }
+
+    .local-info{
+        --gap: 20px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info{
+        align-items: center;
+    }
+
+    .info::after{
+        display: none;
+        content: '';
+    }
+
+    .background-img{
+        flex: 0 0 320px;
+    }
+
+    .leaflet-top.leaflet-left{
+        top: auto;
+        bottom: 0;
+    }
 }

@@ -14,10 +14,12 @@ function submitSearch(e){
 //Função para pegar o local
 
 const key = 'at_qSpJ1bQxGMTTf5P1VqNDBhCFfmkIz'
+const apiUrl = 'https://geo.ipify.org/api/'
+const version = 'v2/'
 const address = new Object
 
 function getLocal(ip){
-    const endpoint = `https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ip=${ip}&domain=${ip}`
+    const endpoint = `${apiUrl}${version}country,city?apiKey=${key}&ipAddress=${ip}&domain=${ip}`
     
     fetch(endpoint)
         .then(blob => blob.json())
@@ -25,7 +27,7 @@ function getLocal(ip){
             Object.assign(address, data)
             setLocal()
         })
-        .catch(error => alert('Please enter a valid IP Address'))
+        .catch(error => alert(`Check if it's a valid IP address or turn off your adblock.`))
 }
 
 function setLocal(){
