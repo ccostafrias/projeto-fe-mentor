@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>  
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <main>
+    <div class="background">
+      <div class="background-img"></div>
+      <div id="map"></div>
+    </div>
+    <div class="content">
+      <div class="search-box">
+        <h1>IP Address Tracker</h1>
+        <form class="search-wrapper" autocomplete="off">
+          <input type="text" name="search" id="search" class="search-input" placeholder="Search for any IP adress or domain" required>
+          <input type="submit" value="" class="search-bttn">
+        </form>
+      </div>
+      <ul class="local-info">
+        <li class="info address">
+          <h2>ip address</h2>
+          <p>192.212.174.101</p>
+        </li>
+        <li class="info location">
+          <h2>location</h2>
+          <p>Brooklyn, NY 10001</p>
+        </li>
+        <li class="info timezone">
+          <h2>timezone</h2>
+          <p>UTC -05:00</p>
+        </li>
+        <li class="info isp">
+          <h2>isp</h2>
+          <p>SpaceX, Starlink</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
