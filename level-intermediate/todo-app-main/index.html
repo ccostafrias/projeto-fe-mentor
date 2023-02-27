@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+
+  <header>
+    <h1>Todo</h1>
+    <ion-icon name="sunny" class="bttn-tggl-scheme"></ion-icon>
+  </header>
+  <main>
+    <div class="input-box card">
+      <input type="checkbox" name="input-check" id="input-check">
+      <input type="text" name="input-todo" id="input-todo" placeholder="Create a new todo">
+    </div>
+    <div class="todo-table">
+      <div class="todo-items">
+      </div>
+      <div class="todo-footer">
+        <p class="todo-count">5 items left</p>
+        <ul class="todo-states">
+          <li>
+            <input type="radio" name="states" id="all" class="states-radio" checked>
+            <label for="all" class="states-text">All</label>
+          </li>
+          <li>
+            <input type="radio" name="states" class="states-radio" id="active">
+            <label for="active" class="states-text">Active</label>
+          </li>
+          <li>
+            <input type="radio" name="states" class="states-radio" id="completed">
+            <label for="completed" class="states-text">Completed</label>
+          </li>
+        </ul>
+        <button class="todo-clear-bttn">Clear Completed</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Drag and drop to reorder list</p>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

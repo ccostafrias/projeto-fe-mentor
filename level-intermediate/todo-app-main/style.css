@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/*Generic CSS*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --box-shadow: hsla(0, 0%, 0%, 0.2);
+    
+    /* Light Theme */
+    
+    --white: hsl(0, 0%, 100%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue-light: hsl(233, 11%, 84%);
+    --very-dark-grayish-blue-light: hsl(235, 19%, 35%);
+    
+    /* Dark Theme */
+    
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --very-dark-grayish-blue-plus: hsl(237, 14%, 26%);
+
+    /* Font */
+
+    --font-main: 'Josefin Sans', sans-serif;
+
+    --fs-xl: 2em;
+    --fs-600: 1.8em;
+    --fs-500: 1.4em;
+    --fs-400: 1em;
+    --fs-200: .7em;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --max-width: 550px;
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    font-size: 18px;
+}
+
+body,
+input,
+textarea,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color);
+    font-family: var(--font-main);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+button, input {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background: var(--bg-color) var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+
+    padding: 80px 0;
+}
+
+header{
+    max-width: var(--max-width);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    letter-spacing: calc(var(--fs-xl)/3);
+    color: var(--very-light-gray);
+}
+
+header ion-icon{
+    font-size: var(--fs-600);
+    color: var(--very-light-gray);
+}
+
+main{
+    max-width: var(--max-width);
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+
+    background-color: var(--primary-color);
+}
+
+.card :nth-child(2){
+    flex: 1 1 auto;
+}
+
+.input-box{
+    border-radius: 10px;
+    box-shadow: 0 10px 20px var(--box-shadow);
+}
+
+input[type='checkbox']{
+    aspect-ratio: 1/1;
+    width: var(--fs-500);
+    border-radius: 50%;
+    border: 2px solid var(--font-color);
+
+    position: relative;
+    cursor: pointer;
+}
+
+input[type='checkbox']:checked{
+    border: none;
+    background: var(--check-background);
+}
+
+input[type='checkbox']:checked::after{
+    display: block;
+    content: '';
+
+    aspect-ratio: 1/1;
+    width: var(--fs-500);
+    background: url('./images/icon-check.svg');
+    background-size: var(--fs-200);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type='checkbox']:checked ~ .todo-item-text{
+    text-decoration: line-through;
+    color: var(--font-color);
+}
+
+#input-todo{
+    color: var(--secundary-color);
+}
+
+.todo-item-text{
+    color: var(--secundary-color);
+}
+
+.todo-item:hover [name="close"]{
+    font-size: var(--fs-500);
+    cursor: pointer;
+}
+
+[name="close"]{
+    font-size: 0;
+}
+
+.todo-table{
+    background-color: var(--primary-color);
+    box-shadow: 0 10px 20px var(--box-shadow);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.todo-table .card{
+    border-bottom: 1px solid var(--font-color);
+}
+
+.todo-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* .todo-footer > *{
+    flex: 1 1 0px;
+} */
+
+.todo-states{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: var(--fw-bold);
+}
+
+.states-text{
+    cursor: pointer;
+}
+
+.states-radio:checked ~ .states-text{
+    color: var(--bright-blue);
+}
+
+.todo-clear-bttn{
+    cursor: pointer;
+}
