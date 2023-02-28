@@ -80,6 +80,10 @@ itemsWrapper.addEventListener('click', e => {
         items.splice(itemIndex, 1)
         setItems()
     }
+
+    if (e.target.classList.contains()){
+        
+    }
 })
 
 input.addEventListener('keyup', e => {
@@ -107,6 +111,12 @@ function getItems() {
 }
 
 function setItems(itemsTo = items) {
+    const actualState = document.querySelector(`[name='states']:checked`)
+    const stateBoolean = actualState.dataset.state === 'true' ? true : false
+    if (actualState.dataset.state !== 'all') {
+        itemsTo = itemsTo.filter(item => item.completed === stateBoolean)
+    }
+
     let count = 0
     itemsWrapper.innerHTML = itemsTo
         .map(item => {
@@ -119,25 +129,27 @@ function setItems(itemsTo = items) {
         })
     
     const todoCounter = document.querySelector('.todo-count')
-    todoCounter.textContent = `${items.length} items left`
+    todoCounter.textContent = `${itemsTo.length} items left`
+    check.checked = false
 
     localStorage.setItem('items', JSON.stringify(items))
 }
 
 const states = [...document.querySelectorAll(`[name='states']`)]
 states.forEach(state => {
-    state.addEventListener('change', e => {
-        console.log(e.target)
-    })
+    state.addEventListener('change', () => setItems(items))
 })
 
 const clearBttn = document.querySelector('.todo-clear-bttn')
 clearBttn.addEventListener('click', clearItems)
 
 function clearItems(){
-    while (items.length > 0) {
-        items.pop()
-    }
+    items.forEach(item => {
+        if (item.completed === true){
+            const index = items.findIndex(a => a === item)
+            items.splice(index, 1)
+        }
+    })
     setItems()
 }
 

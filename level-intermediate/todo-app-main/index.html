@@ -26,15 +26,15 @@
         <p class="todo-count">5 items left</p>
         <ul class="todo-states">
           <li>
-            <input type="radio" name="states" id="all" class="states-radio" checked>
+            <input type="radio" data-state="all" name="states" id="all" class="states-radio" checked>
             <label for="all" class="states-text">All</label>
           </li>
           <li>
-            <input type="radio" name="states" class="states-radio" id="active">
+            <input type="radio" data-state="false" name="states" class="states-radio" id="active">
             <label for="active" class="states-text">Active</label>
           </li>
           <li>
-            <input type="radio" name="states" class="states-radio" id="completed">
+            <input type="radio" data-state="true" name="states" class="states-radio" id="completed">
             <label for="completed" class="states-text">Completed</label>
           </li>
         </ul>
