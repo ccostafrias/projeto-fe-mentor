@@ -20,14 +20,16 @@ function getScheme(scheme) {
 
 const theme = {
     dark: {
-        '--bg-image': `url('./images/bg-desktop-dark.jpg')`,
+        '--bg-image-desk': `url('./images/bg-desktop-dark.jpg')`,
+        '--bg-image-mob': `url('./images/bg-mobile-dark.jpg')`,
         '--bg-color': 'var(--very-dark-blue)',
         '--font-color': 'var(--very-dark-grayish-blue)',
         '--primary-color': 'var(--very-dark-desaturated-blue)',
         '--secundary-color': 'var(--light-grayish-blue)'
     },
     light: {
-        '--bg-image': `url('./images/bg-desktop-light.jpg')`,
+        '--bg-image-desk': `url('./images/bg-desktop-light.jpg')`,
+        '--bg-image-mob': `url('./images/bg-mobile-light.jpg')`,
         '--bg-color': 'var(--very-light-gray)',
         '--font-color': 'var(--light-grayish-blue-light)',
         '--primary-color': 'var(--white)',
@@ -45,8 +47,8 @@ window
 
 
 function setScheme(scheme) {
-    //   moonIcon.setAttribute('name', scheme == 'dark' ? 'moon' : 'moon-outline')
-    Object.keys(theme['dark']).forEach(key => {
+    toggleButton.setAttribute('name', scheme == 'dark' ? 'moon' : 'sunny')
+    Object.keys(theme[scheme]).forEach(key => {
         document.documentElement.style.setProperty(
             key, theme[scheme][key]
         )
@@ -81,9 +83,29 @@ itemsWrapper.addEventListener('click', e => {
         setItems()
     }
 
-    if (e.target.classList.contains()){
-        
+    if (e.target.classList.contains('item-check')){
+        const index = e.target.getAttribute('name').split('-')[1]
+        items[index].completed = items[index].completed ? false : true
+        localStorage.setItem('items', JSON.stringify(items))
     }
+})
+
+new Sortable(itemsWrapper, {
+    animation: 350
+})
+
+itemsWrapper.addEventListener('dragend', e => {
+    while (items.length > 0){
+        items.pop()
+    }
+    const cards = [...itemsWrapper.querySelectorAll('.todo-item')]
+    cards.forEach(card => {
+        items.push({
+            content: card.querySelector('.todo-item-text').textContent,
+            completed: card.querySelector('.item-check').checked
+        })
+    })
+    localStorage.setItem('items', JSON.stringify(items))
 })
 
 input.addEventListener('keyup', e => {
@@ -117,16 +139,16 @@ function setItems(itemsTo = items) {
         itemsTo = itemsTo.filter(item => item.completed === stateBoolean)
     }
 
-    let count = 0
+    let count = -1
     itemsWrapper.innerHTML = itemsTo
         .map(item => {
             count++
-            return `<div class="todo-item card">
-                        <input type="checkbox" name="item-${count}" id="item-${count}" ${item.completed ? 'checked' : ''}>
+            return `<div class="todo-item card" id="card-${count}">
+                        <input type="checkbox" name="item-${count}" id="item-${count}" class='item-check' ${item.completed ? 'checked' : ''}>
                         <p class="todo-item-text">${item.content}</p>
                         <ion-icon name="close" class="bttn-close"></ion-icon>
                     </div>`
-        })
+        }).join('')
     
     const todoCounter = document.querySelector('.todo-count')
     todoCounter.textContent = `${itemsTo.length} items left`
@@ -144,12 +166,12 @@ const clearBttn = document.querySelector('.todo-clear-bttn')
 clearBttn.addEventListener('click', clearItems)
 
 function clearItems(){
-    items.forEach(item => {
-        if (item.completed === true){
-            const index = items.findIndex(a => a === item)
-            items.splice(index, 1)
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].completed === true){
+            items.splice(i, 1)
+            i = 0
         }
-    })
+    }
     setItems()
 }
 

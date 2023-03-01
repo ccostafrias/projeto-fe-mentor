@@ -49,6 +49,12 @@
     --fw-bold: 700;
 
     --max-width: 550px;
+    --tranalte: 0px
+}
+
+*{
+    transition: background .2s ease,
+                color .1s ease;
 }
 
 html,
@@ -56,7 +62,6 @@ body {
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-
     font-size: 18px;
 }
 
@@ -78,6 +83,7 @@ h6 {
 
 ::placeholder {
     opacity: 1;
+    color: var(--font-color);
 }
 
 button, input {
@@ -97,7 +103,7 @@ a {
 }
 
 body{
-    background: var(--bg-color) var(--bg-image);
+    background: var(--bg-color) var(--bg-image-desk);
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -138,7 +144,6 @@ main{
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .card{
@@ -147,7 +152,6 @@ main{
     align-items: center;
     gap: 20px;
     padding: 20px 30px;
-
     background-color: var(--primary-color);
 }
 
@@ -156,8 +160,9 @@ main{
 }
 
 .input-box{
-    border-radius: 10px;
     box-shadow: 0 10px 20px var(--box-shadow);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 input[type='checkbox']{
@@ -192,8 +197,31 @@ input[type='checkbox']:checked ~ .todo-item-text{
     color: var(--font-color);
 }
 
+.todo-table{
+    box-shadow: 0 10px 20px var(--box-shadow);
+    border-radius: 10px;
+}
+
+.todo-table .card{
+    border-bottom: 1px solid var(--font-color);
+}
+
 #input-todo{
     color: var(--secundary-color);
+}
+
+.todo-items > :first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+.todo-item{
+    position: relative;
+}
+
+.todo-item.active{
+    cursor: grab;
+    transform: translateY(var(--translate));
+    border-radius: 10px;
 }
 
 .todo-item-text{
@@ -206,19 +234,9 @@ input[type='checkbox']:checked ~ .todo-item-text{
 }
 
 [name="close"]{
+    position: absolute;
+    right: 30px;
     font-size: 0;
-}
-
-.todo-table{
-    background-color: var(--primary-color);
-    box-shadow: 0 10px 20px var(--box-shadow);
-    border-radius: 10px;
-
-    overflow: hidden;
-}
-
-.todo-table .card{
-    border-bottom: 1px solid var(--font-color);
 }
 
 .todo-footer{
@@ -226,12 +244,23 @@ input[type='checkbox']:checked ~ .todo-item-text{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+
+    background-color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
 }
 
-/* .todo-footer > *{
-    flex: 1 1 0px;
-} */
+.todo-footer > *{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.todo-count{
+    padding-left: 20px;
+}
+
+.todo-clear-bttn{
+    padding-right: 20px;
+}
 
 .todo-states{
     display: flex;
@@ -242,7 +271,7 @@ input[type='checkbox']:checked ~ .todo-item-text{
     font-weight: var(--fw-bold);
 }
 
-.states-text{
+.states-text, .bttn-tggl-scheme{
     cursor: pointer;
 }
 
@@ -252,4 +281,43 @@ input[type='checkbox']:checked ~ .todo-item-text{
 
 .todo-clear-bttn{
     cursor: pointer;
+}
+
+@media (max-width: 720px){
+    body{
+        background: var(--bg-color) var(--bg-image-mob);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .todo-footer{
+        flex-wrap: wrap; 
+        background: none;
+    }
+
+    .todo-footer > *{
+        background-color: var(--primary-color);
+    }
+
+    .todo-count, .todo-clear-bttn{
+        display: flex;
+        flex: 0 0 50%;
+    }
+
+    .todo-count{
+        justify-content: flex-start;
+        border-radius: 0 0 0 10px;
+    }
+
+    .todo-clear-bttn{
+        justify-content: flex-end;
+        border-radius: 0 0 10px 0;
+    }
+
+    .todo-states{
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
 }
