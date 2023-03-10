@@ -14,6 +14,7 @@
   - [Rock paper scissors](#rock-paper-scissors)
   - [Countries API](#countries-api)
   - [Job Listings](#job-listings)
+  - [IP Address Tracker](#ip-address-tracker) 
 
 ## Desafios
 
@@ -37,10 +38,6 @@ Essa é a solução para o desafio [News homepage challenge](https://www.fronten
 - Semanticidade HTML5
 - Flexbox display
 - Responsividade
-
-#### Conclusão
-
-Um desafio bem simples, com um layout intuitivo e agradável, mas que me fez quebrar um pouco a cabeça em relação ao elementos do rodapé da página, pois não estavam se enquadrando tão bem quanto eu queria. Por fim, o resultado me agradou bastante!
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
@@ -66,10 +63,6 @@ Essa é a solução para o desafio [Intro section with dropdown navigation](http
 - Responsividade
 - Menu de navegação interativo
 
-#### Conclusão
-
-Outro desafio simples, mas com um resultado bem bacana. Pude explorar um pouco dos menus de navegação, até então pouco estudados por minha pessoa.
-
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
 ### Notifications Page
@@ -92,11 +85,6 @@ Essa é a solução para o desafio [Notifications page](https://www.frontendment
 - Flexbox display
 - JavaScript com DOM elements
 - Form values
-
-#### Conclusão
-
-Um desafio com layout simples, e por isso me dei o trabalho de fazer um bônus: uma espécie de "notifications maker". No canto superior esquerdo, clique na **?** (invisível primeiramente), insira seus próprios dados e envie sua notificação, totalmente personalizada!
-Gostei muito do resultado e estou pronto para o próximo já!
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
@@ -121,10 +109,6 @@ Essa é a solução para o desafio [Tip calculator app](https://www.frontendment
 - Grid display
 - JavaScript com DOM elements
 
-#### Conclusão
-
-A parte do HTML e do CSS foram bem tranquilas, o maior trabalho foi em deixar o script em JS bem limpo e tirar a maioria dos bugs e erros possíveis.
-
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
 ### Testimonials grid
@@ -146,10 +130,6 @@ Essa é a solução para o desafio [Testimonials Grid Section](https://www.front
 
 - Semanticidade HTML5
 - Grid display
-
-#### Conclusão
-
-Provavelmente o desafio mais fácil até agora, ou pelo menos o que levei menos tempo. Envolve alguns conhecimentos de grid, mas nada que uma aulinha rápida não sane todas as dúvidas sobre o assunto.
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
@@ -175,10 +155,6 @@ Essa é a solução para o desafio [Time tracking dashboard](https://www.fronten
 - JavaScript com DOM elements
 - Arquivo JSON
 
-#### Conclusão
-
-Um dos resultados que mais me agradou, porém o mais frustrante. Tentei procurar como importar um arquivo JSON para então transformá-lo em um objeto, mas por ser *newbie* nesta área, fracassei miseravelmente e simplesmente colei o arquivo JSON no meu próprio scrip em JS. Contudo, esta pequena intempérie não afetou o resultado final, o qual ficou bem legal e fiél ao original.
-
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
 ### Rock paper scissors
@@ -203,10 +179,6 @@ Essa é a solução para o desafio [Rock, Paper, Scissors game](https://www.fron
 - Grid display
 - JavaScript com DOM elements
 - Arquivo JSON
-
-#### Conclusão
-
-Decidi ir um pouco além e aumentar o nível de dificuldade dos desafios e fiz um "rock paper scissors" versão *Big Bang Theory*. A parte mais difícil foi deixar o layout o mais responsivo para todas as reoluções possíveis e apesar de todos os esforços, ainda não ficou 100%, mas tentei o meu melhor. O que importa é que o resultado ficou agradável, apesar de ser um jogo simples baseado em pura sorte.
 
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
@@ -235,10 +207,6 @@ Essa é a solução para o desafio [REST Countries API with color theme switcher
 - Manipulação de Array
 - Mudança de tema (dark & light)
 
-#### Conclusão
-
-Sem dúvidas o desafio mais complexo até agora, porém o mais agradável. Passei alguns dias trabalhando nesse projeto, mas o resultado final valeu super a pena. O curso comnplementar de Javascript do Wesbos certamente me ajudou muito com a manipulação de arrays e de arquivos JSON, além de outros detalhes menores como o scroll ao mudar de section. Estou muito contente com o resultado final!
-
 ![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
 ### Job Listings
@@ -264,6 +232,28 @@ Essa é a solução para o desafio [Job listings with filtering](https://www.fro
 - Arquivo JSON
 - Manipulação de Array e Objeto
 
-#### Conclusão
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
 
-Um desafio mais simples, mas com um resultado bem bacana.
+### IP Address Tracker
+
+Nível de dificuldade = **Intermediário**<br>
+Essa é a solução para o desafio [IP Address Tracker](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/ip-address-tracker-master/)
+
+<p align="center">
+    <img alt="" src="./readme-images/ip-address-tracker-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/ip-address-tracker-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- JavaScript com DOM elements
+- Arquivo JSON
+- Manipulação de Array e Objeto
+- Uso de API's
