@@ -15,6 +15,7 @@
   - [Countries API](#countries-api)
   - [Job Listings](#job-listings)
   - [IP Address Tracker](#ip-address-tracker) 
+  - [Todo list](#todo-list)
 
 ## Desafios
 
@@ -257,3 +258,29 @@ Essa é a solução para o desafio [IP Address Tracker](https://www.frontendment
 - Arquivo JSON
 - Manipulação de Array e Objeto
 - Uso de API's
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Todo list
+
+Nível de dificuldade = **Intermediário**<br>
+Essa é a solução para o desafio [Todo app](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/todo-app-main/)
+
+<p align="center">
+    <img alt="" src="./readme-images/todo-app-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/todo-app-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- JavaScript com DOM elements
+- Manipulação de Array e Objeto
+- Salvando dados com Local Storage
+- Uso de API (drag & drop)
