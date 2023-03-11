@@ -3,19 +3,21 @@
 
 ![Frontend Mentor logo](https://miro.medium.com/max/1400/0*cfYEyKU7fH1Vz37c.png)
 
+---
+
 ## Sumário
-- [Desafios](#desafios)
-  - [News homepage](#news-homepage)
-  - [Dropdown navigation](#dropdown-navigation)
-  - [Notifications page](#notifications-page)
-  - [Tip calculator](#tip-calculator)
-  - [Testimonials grid](#testimonials-grid)
-  - [Time tracking](#time-tracking)
-  - [Rock paper scissors](#rock-paper-scissors)
-  - [Countries API](#countries-api)
-  - [Job Listings](#job-listings)
-  - [IP Address Tracker](#ip-address-tracker) 
-  - [Todo list](#todo-list)
+
+- [News homepage](#news-homepage)
+- [Dropdown navigation](#dropdown-navigation)
+- [Notifications page](#notifications-page)
+- [Tip calculator](#tip-calculator)
+- [Testimonials grid](#testimonials-grid)
+- [Time tracking](#time-tracking)
+- [Rock paper scissors](#rock-paper-scissors)
+- [Countries API](#countries-api)
+- [Job Listings](#job-listings)
+- [IP Address Tracker](#ip-address-tracker) 
+- [Todo list](#todo-list)
 
 ## Desafios
 
