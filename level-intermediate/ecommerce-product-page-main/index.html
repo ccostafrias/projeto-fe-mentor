@@ -3,42 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <header>
+    <nav>
+      <a href="#"><img src="images/logo.svg" alt="sneaker logo"></a>
+      <ul>
+        <li><a href="#">Collections</a</li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button><img src="images/icon-cart.svg" alt="cart" class="icon-cart"></button>
+      <button><img src="images/image-avatar.png" alt="avatar" class="nav-avatar"></button>
+    </nav>
+  </header>
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <main>
+    <div class="product-showcase">
+      <div class="big-showcase">
+      </div>
+      <div class="showcase-wrapper">
+        <div class="mini-showcase showcase-1"></div>
+        <div class="mini-showcase showcase-2"></div>
+        <div class="mini-showcase showcase-3"></div>
+        <div class="mini-showcase showcase-4"></div>
+      </div>
+    </div>
+    <section class="product-content">
+      <h2>Sneaker Company</h2>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+      <div class="price-container">
+        <div class="price-wrapper">
+          <span class="actual-price price">$125.00</span>
+          <span class="discount price">50%</span>
+        </div>
+        <span class="last-price price">$250.00</span>
+      </div>
+      
+      <div class="bttns-card-wrapper">
+        <div class="bttn-count">
+          <button class="math" data-walk="-1">-</button>
+          <span class="count">0</span>
+          <button class="math" data-walk="1">+</button>
+        </div>
+        <button class="bttn-add">
+          <svg width="22" height="20"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
+          <span>Add to cart</span>
+        </button>
+      </div>
+    </section>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="script.js"></script>
+
 </body>
 </html>
