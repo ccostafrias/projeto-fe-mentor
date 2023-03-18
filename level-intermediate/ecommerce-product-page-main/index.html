@@ -10,8 +10,8 @@
 </head>
 <body>
 
-  <header>
-    <nav>
+  <header class="container">
+    <nav  class="pr">
       <a href="#"><img src="images/logo.svg" alt="sneaker logo"></a>
       <ul>
         <li><a href="#">Collections</a</li>
@@ -20,29 +20,33 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <button><img src="images/icon-cart.svg" alt="cart" class="icon-cart"></button>
+      <div class="cart-container">
+        <button class="cart-bttn pr">
+          <img src="images/icon-cart.svg" alt="cart" class="icon-cart">
+        </button>
+        <div class="cart-pop">
+          <h1>Cart</h1>
+          <div class="cart-content">
+            <div class="cart-items">
+              <div class="cart-item">
+                <div class="product-avatar showcase-1"></div>
+                <div class="product-prices">
+                  <p>Fall Limited Edition Sneakers</p>
+                  <p><span class="product-price">$125.00 x 3</span><span class="product-final-price">$375.00</span></p>
+                </div>
+                <button><img src="images/icon-delete.svg" alt="trash icon" class="bttn-trash"></button>
+              </div>
+            </div>
+            <button class="bttn-checkout bttn">Checkout</button>
+          </div>
+        </div>
+      </div>
       <button><img src="images/image-avatar.png" alt="avatar" class="nav-avatar"></button>
     </nav>
 
-    <div class="cart-pop">
-      <h1>Cart</h1>
-      <div class="cart-content">
-        <div class="cart-items">
-          <div class="cart-item">
-            <div class="product-avatar showcase-1"></div>
-            <div class="product-prices">
-              <p>Fall Limited Edition Sneakers</p>
-              <p><span class="product-price">$125.00 x 3</span><span class="product-final-price">$375.00</span></p>
-            </div>
-            <button><img src="images/icon-delete.svg" alt="trash icon" class="bttn-trash"></button>
-          </div>
-        </div>
-        <button class="bttn-checkout bttn">Checkout</button>
-      </div>
-    </div>
   </header>
 
-  <main>
+  <main class="container">
     <div class="product-showcase">
       <div class="big-showcase">
       </div>
@@ -80,10 +84,21 @@
   </main>
 
   <div class="showcase-full">
-    <div class="product-showcase">
-      <div class="big-showcase">
+    <div class="product-showcase full">
+      <div class="close-bttn">
+        <img src="images/icon-close.svg" alt="close icon">
       </div>
-      <div class="showcase-wrapper">
+      <div class="big-showcase full">
+        <div class="pass-images">
+          <div class="pass pass-left" data-walk="-1">
+            <img src="images/icon-previous.svg" alt="Previous icon">
+          </div>
+          <div class="pass pass-right" data-walk="1">
+            <img src="images/icon-next.svg" alt="Next icon">
+          </div>
+        </div>
+      </div>
+      <div class="showcase-wrapper full">
         <div class="mini-showcase showcase-1"></div>
         <div class="mini-showcase showcase-2"></div>
         <div class="mini-showcase showcase-3"></div>

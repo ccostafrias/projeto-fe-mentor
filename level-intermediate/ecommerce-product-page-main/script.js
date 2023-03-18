@@ -3,7 +3,8 @@ const showcase = document.querySelector('.big-showcase')
 const countDiv = document.querySelector('.count')
 const countBttns = [...document.querySelectorAll('.count-add')]
 const showcaseFull = document.querySelector('.showcase-full')
-const cartBttn = document.querySelector('.icon-cart')
+const closeBttn = document.querySelector('.close-bttn')
+const cartBttn = document.querySelector('.cart-bttn')
 const cartPop = document.querySelector('.cart-pop')
 const addCart = document.querySelector('.add-cart')
 
@@ -22,8 +23,8 @@ minicases.forEach(minicase => {
 
 function handleClickCase(e) {
     minicases.forEach(minicase => minicase.classList.remove('active'))
-    const i = minicases.indexOf(e.target)
-    showcase.style.setProperty('background-image', `url('./images/image-product-${i+1}.jpg')`)
+    const [,i] = [...e.target.classList].find(classy => classy.match(/^(showcase)\-\d+$/)).split('-')
+    e.target.closest('.showcase-wrapper').previousElementSibling.style.setProperty('background-image', `url('./images/image-product-${i}.jpg')`)
     e.target.classList.add('active')
 }
 
@@ -38,6 +39,7 @@ function handleClickAddBttn(e) {
 }
 
 showcase.addEventListener('click', handleClickShowase)
+closeBttn.addEventListener('click', handleClickShowase)
 function handleClickShowase(e) {
     showcaseFull.classList.toggle('active')
 }
@@ -47,7 +49,6 @@ function handkeClickShowCart(e) {
     cartPop.classList.toggle('active')
 
     attCart()
-
 }
 
 function attCart() {
@@ -67,23 +68,44 @@ function attCart() {
                       <p>${item.name}</p>
                       <p><span class="product-price">${toLocale(item.price)} x ${item.count}</span><span class="product-final-price">${toLocale(item.price*item.count)}</span></p>
                     </div>
+                    <button><img src="images/icon-delete.svg" alt="trash icon" class="bttn-trash"></button>
                 </div>
             `
         })
+        const totalCart = cart.reduce((tot, item) => { return tot + item.count }, 0)
+        document.documentElement.style.setProperty('--content', `'${totalCart}'`)
+        content.innerHTML += `<button class="bttn-checkout bttn">Checkout</button>`
     }
 
     function toLocale(n) {
-        return (n.toFixed(2)).toLocaleString('en-US', {style: 'currency', currency: 'USD'})
+        return n.toLocaleString('en-US', {style: 'currency', currency: 'USD'})
     }
 }
 
 addCart.addEventListener('click', handleClickAddCart)
 function handleClickAddCart(e) {
-    if (!cart.includes(product)) cart.push(product);
-    const actualProduct = cart
-        .find(item => item.name === product.name)
+    if (!cart.filter(item => item.name === product.name).length) cart.push(Object.assign({}, product))
+    const actualProduct = cart.find(item => item.name === product.name)
     if (!actualProduct['count']) actualProduct['count'] = 0
     actualProduct['count'] += productsCount
 
     attCart()
 }
+
+window.addEventListener('click', e => {
+    // console.log(e.target.closest('.cart-pop'))
+    if (!e.target.closest('.cart-pop') && !e.target.closest('.cart-bttn')) cartPop.classList.remove('active')
+})
+
+cartPop.addEventListener('click', handleClickRemoveProduct)
+
+function handleClickRemoveProduct(e) {
+    if (e.target.closest('.bttn-trash')) {
+        const index = cart.findIndex(item => item.name === product.name)
+        cart.splice(index, 1)
+
+        attCart()
+    }
+}
+
+window.onload = () => { attCart() }
