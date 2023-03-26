@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+/*Generic CSS*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background .1s ease;
+}
+
+:root {
+    /* Font */
+
+    --font-main: 'League Spartan', sans-serif;
+
+    --fs-xl: 3rem;
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    --fs-200: .6rem;
+
+    --fw-regular: 700;
+    /* --fw-bold: 700; */
+}
+
+html {
+    height: 100vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--main-bg);
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+body,
+input,
+textarea,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color-primary);
+    font-family: var(--font-main);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
+
+::placeholder {
+    opacity: 1;
+    color: var(--font-color);
+}
+
+button, input {
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-header > h1 {
+    font-size: var(--fs-500);
+}
+
+.theme-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.theme-container > h2,
+.theme-nums {
+    font-size: var(--fs-200);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.theme-wrapper {
+    position: relative;
+}
+
+.theme-nums {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(calc(-100% - 5px));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.theme-swapper {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 4em;
+    border-radius: 100px;
+    background-color: var(--buttons-bg);
+    cursor: pointer;
+}
+
+.theme-swapper-ball {
+    width: 100%;
+}
+
+.theme-swapper-ball::-webkit-slider-thumb {
+    aspect-ratio: 1/1;
+    -webkit-appearance: none;
+    border-radius: 50px;
+    width: 1rem;
+    background-color: var(--equals-key-bg);
+
+  }
+
+/* Main */
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.calc-display {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--screen-bg);
+    padding: 2.5em 2em 2em 2em;
+    border-radius: .4rem;
+}
+
+.calc-display-content {
+    font-size: var(--fs-xl);
+}
+
+.calc-display-math {
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    opacity: .75;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    
+    border-radius: .4rem;
+    padding: 1.2em;
+    background-color: var(--buttons-bg);
+}
+
+.calc-button {
+    border-radius: .4rem;
+    padding: .35em .8em;
+    font-size: var(--fs-600);
+    color: var(--font-color-secundary);
+    background-color: var(--key-bg);
+    box-shadow: inset 0 -.1em 0 var(--key-shadow);
+}
+
+.calc-button.especial {
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+    color: var(--white);
+    background-color: var(--especial-key-bg);
+    box-shadow: inset 0 -3px 0 var(--especial-key-shadow);
+}
+
+.calc-button.equals {
+    /* font-size: var(--fs-500); */
+    color: var(--equals-font-color);
+    background-color: var(--equals-key-bg);
+    box-shadow: inset 0 -3px 0 var(--equals-key-shadow);
+}
+
+.calc-button:hover,
+.theme-swapper:hover > .theme-swapper-ball {
+    filter: brightness(120%);
+}
+
+.calc-button:active {
+    box-shadow: none;
+    height: calc(100% - .1em);
+    transform: translateY(.1em);
+}
+
+.span-2c {
+    grid-column: span 2;
+}

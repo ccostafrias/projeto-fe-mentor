@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+  <header class="calc-header">
+    <h1>calc</h1>
+    <div class="theme-container">
+      <h2>Theme</h2>
+      <div class="theme-wrapper">
+        <div class="theme-nums">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+        <div class="theme-swapper">
+          <input type="range" name="theme" id="theme-swapper-ball" class="theme-swapper-ball" min="1" max="3" value="1">
+          <!-- <div class="theme-swapper-ball"></div> -->
+        </div>
+        
+      </div>
+    </div>
+  </header>
+  <main class="calc">
+    <div class="calc-display">
+      <span class="calc-display-math"></span>
+      <span class="calc-display-content">0</span>
+    </div>
+    <div class="calc-buttons">
+      <button class="calc-button">7</button>
+      <button class="calc-button">8</button>
+      <button class="calc-button">9</button>
+      <button class="calc-button especial">del</button>
+      <button class="calc-button">4</button>
+      <button class="calc-button">5</button>
+      <button class="calc-button">6</button>
+      <button class="calc-button" data-math="true">+</button>
+      <button class="calc-button">1</button>
+      <button class="calc-button">2</button>
+      <button class="calc-button">3</button>
+      <button class="calc-button" data-math="true">-</button>
+      <button class="calc-button">.</button>
+      <button class="calc-button">0</button>
+      <button class="calc-button" data-math="true">/</button>
+      <button class="calc-button" data-math="true">x</button>
+      <button class="calc-button especial span-2c">reset</button>
+      <button class="calc-button equals span-2c">=</button>
+    </div>
+  </main>
+
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/theme-swapper.js"></script>
+</body>
+</html>
