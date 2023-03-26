@@ -18,6 +18,7 @@
 - [Job Listings](#job-listings)
 - [IP Address Tracker](#ip-address-tracker) 
 - [Todo list](#todo-list)
+- [Ecommerce Page](#ecommerce-page)
 
 ## Desafios
 
@@ -286,3 +287,27 @@ Essa é a solução para o desafio [Todo app](https://www.frontendmentor.io/chal
 - Manipulação de Array e Objeto
 - Salvando dados com Local Storage
 - Uso de API (drag & drop)
+
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Ecommerce Page
+
+Nível de dificuldade = **Intermediário**<br>
+Essa é a solução para o desafio [E-commerce product page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/ecommerce-product-page-main/)
+
+<p align="center">
+    <img alt="" src="./readme-images/ecommerce-page-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/ecommerce-page-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Responsividade
+- Flexbox display
+- JavaScript com DOM elements
+- Manipulação de Array e Objeto
