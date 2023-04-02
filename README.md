@@ -326,7 +326,7 @@ Essa é a solução para o desafio [Calculator app](https://www.frontendmentor.i
 <p align="center">
     <img alt="" src="./readme-images/calculator-desktop.gif" width="60%" align="top">
 &nbsp; &nbsp; &nbsp; &nbsp;
-    <img alt="" src="./readme-images/calculator-page-mobile.gif" width="20%" align="top">
+    <img alt="" src="./readme-images/calculator-mobile.gif" width="20%" align="top">
 </p>
 
 #### Skills praticadas
@@ -339,9 +339,9 @@ Essa é a solução para o desafio [Calculator app](https://www.frontendmentor.i
 
 | Tecla | Ação |
 |---:|:---|
-| Escape | Reset |
-| Delete, Backspace | Del |
-| Enter, = | Show Result |
+| Escape | Reiniciar |
+| Delete, Backspace | Deletar |
+| Enter, = | Calcular |
 | + | Adição |
 | - | Subtração |
 | \*, x | Multiplicação |
