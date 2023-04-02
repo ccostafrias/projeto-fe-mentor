@@ -339,14 +339,15 @@ Essa é a solução para o desafio [Calculator app](https://www.frontendmentor.i
 
 | Tecla | Ação |
 |---:|:---|
-| Escape | Reiniciar |
-| Delete, Backspace | Deletar |
-| Enter, = | Calcular |
-| + | Adição |
-| - | Subtração |
-| \*, x | Multiplicação |
-| / | Divisão |
-| ! | Fatorial |
-| % | Porcentagem |
-| Unbound | Troca de sinal |
-| 0-9 | Números |
+| `Escape` | Reiniciar |
+| `Delete` `Backspace` | Deletar |
+| `Enter` `=` | Calcular |
+| `+` | Adição |
+| `-` | Subtração |
+| `*` `x` | Multiplicação |
+| `/` | Divisão |
+| `!` | Fatorial |
+| `%` | Porcentagem |
+| `´` `^` `~` | Exponenciação |
+| `0-9` | Números |
+| ~~Unbound~~ | Troca de sinal |
