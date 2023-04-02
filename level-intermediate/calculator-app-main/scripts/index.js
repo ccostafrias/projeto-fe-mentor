@@ -3,10 +3,8 @@ const calcDisplay = document.querySelector('.calc-display-content')
 const calcDisplayOperations = document.querySelector('.calc-display-math')
 let isFirstPart = true
 let isFinish = false
-let hasComma = false
 let numA = 0
-let numB = null
-let operator = null
+let numB = operator = null
 let result
 
 calcButtons.forEach(calcBttn => {
@@ -42,11 +40,11 @@ function writeNum(n) {
     }
 
     if (calcDisplay.innerHTML == '0' && n != '.') calcDisplay.innerHTML = ''
+    else if (calcDisplay.innerHTML == 'Infinity' || calcDisplay.innerHTML == 'NaN') calcDisplay.innerHTML = ''
 
     if (n == '.') {
-        if (!hasComma) {
+        if (!calcDisplay.innerHTML.includes('.')) {
             calcDisplay.innerHTML += '.'
-            hasComma = true
         }
     } else {
         calcDisplay.innerHTML += n
@@ -57,7 +55,6 @@ function writeNum(n) {
 
 function del() {
     calcDisplay.innerHTML = '0'
-    hasComma = false
 
     saveNums()
 }
@@ -65,7 +62,6 @@ function del() {
 function reset() {
     calcDisplay.innerHTML = '0'
     calcDisplayOperations.innerHTML = ''
-    hasComma = false
     isFirstPart = true
     numA = 0
     numB = null
@@ -86,7 +82,6 @@ function operate(signal) {
     }
     if (isFirstPart) {
         operator = signal
-        hasComma = false
         isFirstPart = false
         numB = '0'
         calcDisplayOperations.innerHTML = `${numA} ${operator}`
@@ -97,6 +92,10 @@ function operate(signal) {
 }
 
 function modify(modificator, result) {
+    if (isFinish) {
+        isFinish = false
+        isFirstPart = true
+    }
     const num = Number(calcDisplay.innerHTML)
     switch (modificator) {
         case '!':
@@ -112,9 +111,8 @@ function modify(modificator, result) {
             break
         case '%':
             result = num / 100
-            if (result % Math.floor(result) !== 0) hasComma = true
             break
-        case '^':
+        case 'Dead':
             result = num ** 2
             break
         case '±':
@@ -149,4 +147,32 @@ function calculate(a, operator, b, result) {
     calcDisplayOperations.innerHTML = `${numA} ${operator} ${numB} =`
     isFinish = true
     numA = result
+}
+
+window.addEventListener('keydown', handleKeyWindow)
+
+function handleKeyWindow(e, approval = false) {
+    const key = e.key
+    calcButtons.forEach(calcBttn => {
+        const type = calcBttn.dataset.type
+        if (type === 'modificator') {
+            const mod = calcBttn.dataset.mod
+            if (key === mod) {
+                approval = true
+            }
+        } else {
+            const keys = calcBttn.dataset.key ? calcBttn.dataset.key.split(', ') : calcBttn.innerHTML
+            if (keys.includes(key)) {
+                approval = true
+            }
+        }
+        if (approval) {
+            approval = false
+            calcBttn.click()
+            calcBttn.classList.toggle('click')
+            setTimeout(() => {
+                calcBttn.classList.toggle('click')
+            }, 100);
+        }
+    })
 }

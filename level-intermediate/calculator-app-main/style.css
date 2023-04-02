@@ -171,23 +171,23 @@ sup {
 }
 
 ::-webkit-scrollbar {
-    position: absolute;
     width: 10px;
+    height: 10px;
 }
   
 /* Track */
 ::-webkit-scrollbar-track {
-background: #f1f1f1;
+    background: var(--especial-key-bg);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: #888;
+    background: var(--key-bg);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: #555;
+    background: var(--key-shadow);
 }
 
 .calc-display-content {
@@ -235,9 +235,11 @@ background: #555;
     display: block;
     height: calc(var(--fs-600) - 2px);
     font-family: var(--fonts-secundary);
+    overflow: hidden;
 }
 
-.especial-character:active {
+.especial-character:active,
+.especial-character.click {
     box-shadow: none;
     height: calc(var(--fs-600) - 5px);
     transform: translateY(3px);
@@ -258,7 +260,8 @@ background: #555;
     filter: brightness(120%);
 }
 
-.calc-button:not(.especial-character):active {
+.calc-button:not(.especial-character):active,
+.calc-button:not(.especial-character).click {
     box-shadow: none;
     height: calc(100% - .1em);
     transform: translateY(.1em);
