@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita&display=swap');
 
 /*Generic CSS*/
 
@@ -16,6 +17,7 @@
     /* Font */
 
     --font-main: 'League Spartan', sans-serif;
+    --fonts-secundary: 'Amita', cursive;;
 
     --fs-xl: 3rem;
     --fs-600: 2rem;
@@ -29,7 +31,7 @@
 
 html {
     height: 100vh;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +82,10 @@ ol {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+sup {
+    font-size: var(--fs-400);
 }
 
 /* Header */
@@ -164,8 +170,30 @@ a {
     border-radius: .4rem;
 }
 
+::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
 .calc-display-content {
     font-size: var(--fs-xl);
+    overflow-x: auto;
+    max-width: 301px;
 }
 
 .calc-display-math {
@@ -191,7 +219,7 @@ a {
     font-size: var(--fs-600);
     color: var(--font-color-secundary);
     background-color: var(--key-bg);
-    box-shadow: inset 0 -.1em 0 var(--key-shadow);
+    box-shadow: inset 0 -3px 0 var(--key-shadow);
 }
 
 .calc-button.especial {
@@ -202,8 +230,24 @@ a {
     box-shadow: inset 0 -3px 0 var(--especial-key-shadow);
 }
 
+.especial-character {
+    box-sizing: content-box;
+    display: block;
+    height: calc(var(--fs-600) - 2px);
+    font-family: var(--fonts-secundary);
+}
+
+.especial-character:active {
+    box-shadow: none;
+    height: calc(var(--fs-600) - 5px);
+    transform: translateY(3px);
+}
+
+.especial-character > * {
+    transform: translateY(-27%);
+}
+
 .calc-button.equals {
-    /* font-size: var(--fs-500); */
     color: var(--equals-font-color);
     background-color: var(--equals-key-bg);
     box-shadow: inset 0 -3px 0 var(--equals-key-shadow);
@@ -214,7 +258,7 @@ a {
     filter: brightness(120%);
 }
 
-.calc-button:active {
+.calc-button:not(.especial-character):active {
     box-shadow: none;
     height: calc(100% - .1em);
     transform: translateY(.1em);
