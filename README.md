@@ -19,6 +19,7 @@
 - [IP Address Tracker](#ip-address-tracker) 
 - [Todo list](#todo-list)
 - [Ecommerce Page](#ecommerce-page)
+- [Calculator app](#calculator-app)
 
 ## Desafios
 
@@ -193,7 +194,7 @@ Essa é a solução para o desafio [REST Countries API with color theme switcher
 
 #### Screenshots
 
-[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/countries-api/)
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-advanced/countries-api/)
 
 <p align="center">
     <img alt="" src="./readme-images/capi-desktop.gif" width="60%" align="top">
@@ -311,3 +312,41 @@ Essa é a solução para o desafio [E-commerce product page](https://www.fronten
 - Flexbox display
 - JavaScript com DOM elements
 - Manipulação de Array e Objeto
+![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+
+### Calculator app
+
+Nível de dificuldade = **Intermediário**<br>
+Essa é a solução para o desafio [Calculator app](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).
+
+#### Screenshots
+
+[Minha resolução](https://ccostafrias.github.io/projeto-fe-mentor/level-intermediate/calculator-app-main/)
+
+<p align="center">
+    <img alt="" src="./readme-images/calculator-desktop.gif" width="60%" align="top">
+&nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="" src="./readme-images/calculator-page-mobile.gif" width="20%" align="top">
+</p>
+
+#### Skills praticadas
+
+- Grid display
+- JavaScript com DOM elements
+- Salvando dados com Local Storage
+
+#### Observações
+
+| Tecla | Ação |
+|---:|:---|
+| Escape | Reset |
+| Delete, Backspace | Del |
+| Enter, = | Show Result |
+| + | Adição |
+| - | Subtração |
+| \*, x | Multiplicação |
+| / | Divisão |
+| ! | Fatorial |
+| % | Porcentagem |
+| Unbound | Troca de sinal |
+| 0-9 | Números |
