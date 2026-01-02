@@ -44,7 +44,7 @@ Essa é a solução para o desafio [News homepage challenge](https://www.fronten
 - Flexbox display
 - Responsividade
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Dropdown navigation
 
@@ -68,7 +68,7 @@ Essa é a solução para o desafio [Intro section with dropdown navigation](http
 - Responsividade
 - Menu de navegação interativo
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Notifications Page
 
@@ -91,7 +91,7 @@ Essa é a solução para o desafio [Notifications page](https://www.frontendment
 - JavaScript com DOM elements
 - Form values
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Tip calculator
 
@@ -114,7 +114,7 @@ Essa é a solução para o desafio [Tip calculator app](https://www.frontendment
 - Grid display
 - JavaScript com DOM elements
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Testimonials grid
 
@@ -136,7 +136,7 @@ Essa é a solução para o desafio [Testimonials Grid Section](https://www.front
 - Semanticidade HTML5
 - Grid display
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Time tracking
 
@@ -160,7 +160,7 @@ Essa é a solução para o desafio [Time tracking dashboard](https://www.fronten
 - JavaScript com DOM elements
 - Arquivo JSON
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Rock paper scissors
 
@@ -185,7 +185,7 @@ Essa é a solução para o desafio [Rock, Paper, Scissors game](https://www.fron
 - JavaScript com DOM elements
 - Arquivo JSON
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Countries API
 
@@ -212,7 +212,7 @@ Essa é a solução para o desafio [REST Countries API with color theme switcher
 - Manipulação de Array
 - Mudança de tema (dark & light)
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Job Listings
 
@@ -237,7 +237,7 @@ Essa é a solução para o desafio [Job listings with filtering](https://www.fro
 - Arquivo JSON
 - Manipulação de Array e Objeto
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### IP Address Tracker
 
@@ -263,7 +263,7 @@ Essa é a solução para o desafio [IP Address Tracker](https://www.frontendment
 - Manipulação de Array e Objeto
 - Uso de API's
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Todo list
 
@@ -289,7 +289,7 @@ Essa é a solução para o desafio [Todo app](https://www.frontendmentor.io/chal
 - Salvando dados com Local Storage
 - Uso de API (drag & drop)
 
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Ecommerce Page
 
@@ -312,7 +312,7 @@ Essa é a solução para o desafio [E-commerce product page](https://www.fronten
 - Flexbox display
 - JavaScript com DOM elements
 - Manipulação de Array e Objeto
-![divider line](https://about.rogers.com/wp-content/uploads/2020/09/Divider-Line-03.png)
+---
 
 ### Calculator app
 
